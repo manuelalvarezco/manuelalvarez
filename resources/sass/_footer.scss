@@ -1,0 +1,78 @@
+.footer {
+    background-color: $primary-color;
+}
+
+.contenedor {
+    display: flex;
+    align-items: center;
+    max-width: 765px;
+    margin: auto;
+    padding: 90px 30px;
+}
+
+.logo {
+    width: 50%;
+}
+
+.formulario {
+    margin: 0 40px;
+    min-width: 500px;
+}
+
+.formulario-imputs__input {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+}
+
+.titulo,
+.formulario-imputs__label,
+.terms,
+.formulario-imputs__button {
+    color: $white-color;
+}
+
+.formulario-imputs__label {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.terms {
+    margin: 0 0 0 5px;
+    font-size: .9em;
+}
+
+.formulario-imputs__box {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.formulario-imputs__checkbox {
+    margin: 0;
+}
+
+.formulario-imputs__button {
+    font-weight: bold;
+    color: $primary-color;
+    background-color: #fff;
+    border-color: #fff;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s;
+}
