@@ -1,7 +1,8 @@
-<div class="footer">
+
+<div class="footer mt-5">
   <div class="contenedor">
     <section class="logo">
-      <img src="https://i.pinimg.com/474x/93/73/17/9373178861d5f64ed0184b3fec677512.jpg" alt="">
+      <img class="logo-img" src="https://i.pinimg.com/474x/93/73/17/9373178861d5f64ed0184b3fec677512.jpg" alt="">
     </section>
     <section class="formulario">
       <h3 class="titulo">
@@ -18,4 +19,24 @@
       </div>
     </section>
   </div>
+
+  <h5 class="text-center text-white">
+    <strong>Biowell</strong> es una marca registrada de <strong>Biowellness S.A.S.</strong>
+  </h5>
+  <div class="container">
+    <div class="d-flex text-center text-white">
+      <div class="row mt-2">
+        <div class="d-flex col-md-8 box-footer">
+          <p>Mayor información en <span class="box-footer__title">Biowellness</span></p>
+          <div class="d-flex align-items-center box-footer__iconos">
+            <span>Instagram</span>
+            <span>Facebook</span>
+            <a class="box-footer__ancla" style="font-size: 30px;font-weight: bold;text-decoration: none;color:white" href="#">Biowell.co</a>
+          </div>
+      </div>
+      </div>
+    </div>
+  </div>
+    
+ 
 </div>

@@ -21,8 +21,6 @@
 </head>
 <body>
     <div id="app">
-        @include('partials.navbar')
-        
         <main>
             @yield('content')
         </main>

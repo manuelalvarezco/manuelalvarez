@@ -8,15 +8,30 @@
     max-width: 765px;
     margin: auto;
     padding: 90px 30px;
+    @media screen and(max-width: 767px) {
+        flex-wrap: wrap;
+        padding: 20px 15px;
+    }
 }
 
 .logo {
     width: 50%;
+    @media screen and(max-width: 767px) {
+        width: 100%;
+    }
+}
+
+.logo-img {
+    width: 100%;
 }
 
 .formulario {
     margin: 0 40px;
-    min-width: 500px;
+    max-width: 500px;
+    @media screen and(max-width: 767px) {
+        margin: 20px 15px;
+        max-width: auto;
+    }
 }
 
 .formulario-imputs__input {
@@ -32,6 +47,9 @@
     background-clip: padding-box;
     border: 1px solid #ced4da;
     border-radius: .25rem;
+    @media screen and(max-width: 767px) {
+        margin-top: 10px;
+    }
 }
 
 .titulo,
@@ -49,6 +67,12 @@
 .terms {
     margin: 0 0 0 5px;
     font-size: .9em;
+}
+
+.formulario-imputs {
+    @media screen and(max-width: 767px) {
+        margin-top: 20px;
+    }
 }
 
 .formulario-imputs__box {
@@ -75,4 +99,41 @@
     line-height: 1.5;
     border-radius: .25rem;
     transition: color .15s;
+    @media screen and(max-width: 767px) {
+        margin-top: 10px;
+        width: 100%;
+    }
+}
+
+.box-footer {
+    margin-left: 33%;
+    @media screen and(max-width: 767px) {
+        margin: 0;
+        flex-direction: column;
+    }
+}
+
+.box-footer__title {
+    font-size: 30px;
+    font-weight: bold;
+    @media screen and(max-width: 767px) {
+        font-size: 30px;
+        font-weight: bold;
+        display: block;
+    }
+}
+
+.box-footer__iconos {
+    margin-left: auto !important;
+    @media screen and(max-width: 767px) {
+        margin-left: 0!important;
+        flex-direction: column;
+    }
+}
+
+.box-footer__ancla {
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
 }
