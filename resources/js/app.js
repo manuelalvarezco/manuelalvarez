@@ -25,6 +25,7 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 Vue.component('register-component', require('./components/RegisterComponent.vue').default);
 Vue.component('ingredients-component', require('./components/IngredientsComponent.vue').default);
 Vue.component('main-component', require('./components/MainComponent.vue').default);
+Vue.component('mini-logo-component', require('./components/MiniLogosComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

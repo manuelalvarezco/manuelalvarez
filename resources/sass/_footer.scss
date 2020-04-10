@@ -2,38 +2,6 @@
     background-color: $primary-color;
 }
 
-.contenedor {
-    display: flex;
-    align-items: center;
-    max-width: 765px;
-    margin: auto;
-    padding: 90px 30px;
-    @media screen and(max-width: 767px) {
-        flex-wrap: wrap;
-        padding: 20px 15px;
-    }
-}
-
-.logo {
-    width: 50%;
-    @media screen and(max-width: 767px) {
-        width: 100%;
-    }
-}
-
-.logo-img {
-    width: 100%;
-}
-
-.formulario {
-    margin: 0 40px;
-    max-width: 500px;
-    @media screen and(max-width: 767px) {
-        margin: 20px 15px;
-        max-width: auto;
-    }
-}
-
 .formulario-imputs__input {
     display: block;
     width: 100%;

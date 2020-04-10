@@ -4,7 +4,7 @@
     <div class="ingredients mt-5">
       <div class="ingredients-box">
           <div class="box-item">
-            <img src="https://images.unsplash.com/photo-1553530979-7ee52a2670c4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=947&q=80" alt="image" class="box-item__img">
+            <img src="/img/canamo.jpg" alt="image" class="box-item__img">
             <h5 class="box-item__title">
               Semilla de camaño
             </h5>
@@ -13,7 +13,7 @@
             </span>
           </div>
           <div class="box-item">
-            <img src="https://images.unsplash.com/photo-1553530979-7ee52a2670c4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=947&q=80" alt="image" class="box-item__img">
+            <img src="/img/almendras.jpg" alt="image" class="box-item__img">
             <h5 class="box-item__title">
               Aceite de almendras
             </h5>
@@ -22,7 +22,7 @@
             </span>
           </div>
           <div class="box-item">
-            <img src="https://images.unsplash.com/photo-1553530979-7ee52a2670c4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=947&q=80" alt="image" class="box-item__img">
+            <img src="/img/mentol.jpg" alt="image" class="box-item__img">
             <h5 class="box-item__title">
               Mentol
             </h5>
@@ -31,7 +31,7 @@
             </span>
           </div>
           <div class="box-item">
-            <img src="https://images.unsplash.com/photo-1553530979-7ee52a2670c4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=947&q=80" alt="image" class="box-item__img">
+            <img src="/img/cafe.jpg" alt="image" class="box-item__img">
             <h5 class="box-item__title">
               Mucílago de café
             </h5>
@@ -40,7 +40,7 @@
             </span>
           </div>
           <div class="box-item">
-            <img src="https://images.unsplash.com/photo-1553530979-7ee52a2670c4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=947&q=80" alt="image" class="box-item__img">
+            <img src="/img/florarnica.jpg" alt="image" class="box-item__img">
             <h5 class="box-item__title">
               Flor árnica
             </h5>

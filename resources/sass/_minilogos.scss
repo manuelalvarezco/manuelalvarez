@@ -1,15 +1,17 @@
-.ingredients {
+.minilogos {
     display: flex;
     justify-content: center;
 }
 
-.ingredients-title {
+.minilogos-title {
     font-size: 35px;
     color: $primary-color;
 }
 
-.ingredients-box {
+.minilogos-box {
+    width: 100%;
     display: flex;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     @media screen and(max-width: 767px) {
@@ -17,7 +19,11 @@
     }
 }
 
-.box-item {
+.minilogo-item {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
     max-width: 200px;
     margin: 0 10px;
@@ -27,13 +33,14 @@
     }
 }
 
-.box-item__title {
+.minilogo-item__title {
     font-weight: bold;
-    color: $primary-color;
+    color: $gray-color;
     margin-top: 20px;
 }
 
-.box-item__img {
+.minilogo-item__img {
+    width: 60px;
     max-height: 160px;
     max-width: 100%;
 }

@@ -2,7 +2,7 @@
 <div class="footer mt-5">
   <div class="contenedor">
     <section class="logo">
-      <img class="logo-img" src="https://i.pinimg.com/474x/93/73/17/9373178861d5f64ed0184b3fec677512.jpg" alt="">
+      <img class="logo-img" src="/img/icono-blanco.png" alt="biowell">
     </section>
     <section class="formulario">
       <h3 class="titulo">

@@ -1,48 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
 
 .footer {
-  background-color: #04B4AE;
-}
-
-.contenedor {
-  display: flex;
-  align-items: center;
-  max-width: 765px;
-  margin: auto;
-  padding: 90px 30px;
-}
-
-@media screen and (max-width: 767px) {
-  .contenedor {
-    flex-wrap: wrap;
-    padding: 20px 15px;
-  }
-}
-
-.logo {
-  width: 50%;
-}
-
-@media screen and (max-width: 767px) {
-  .logo {
-    width: 100%;
-  }
-}
-
-.logo-img {
-  width: 100%;
-}
-
-.formulario {
-  margin: 0 40px;
-  max-width: 500px;
-}
-
-@media screen and (max-width: 767px) {
-  .formulario {
-    margin: 20px 15px;
-    max-width: auto;
-  }
+  background-color: #25A5A4;
 }
 
 .formulario-imputs__input {
@@ -101,7 +60,7 @@
 
 .formulario-imputs__button {
   font-weight: bold;
-  color: #04B4AE;
+  color: #25A5A4;
   background-color: #fff;
   border-color: #fff;
   display: inline-block;
@@ -171,11 +130,12 @@
 
 .ingredients-title {
   font-size: 35px;
-  color: #04B4AE;
+  color: #25A5A4;
 }
 
 .ingredients-box {
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
 }
 
@@ -200,17 +160,63 @@
 
 .box-item__title {
   font-weight: bold;
-  color: #04B4AE;
+  color: #25A5A4;
   margin-top: 20px;
 }
 
 .box-item__img {
+  max-height: 160px;
   max-width: 100%;
+}
+
+.v-application--wrap {
+  min-height: auto !important;
 }
 
 @media screen and (max-width: 767px) {
   .logo-img {
     width: 100%;
+  }
+}
+
+.contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 765px;
+  margin: auto;
+  padding: 90px 30px;
+}
+
+@media screen and (max-width: 767px) {
+  .contenedor {
+    flex-wrap: wrap;
+    padding: 20px 15px;
+  }
+}
+
+.logo {
+  max-width: 450px;
+}
+
+@media screen and (max-width: 767px) {
+  .logo {
+    width: 100%;
+  }
+}
+
+.logo-img {
+  width: 100%;
+}
+
+.formulario {
+  max-width: 500px;
+}
+
+@media screen and (max-width: 767px) {
+  .formulario {
+    margin: 20px 15px;
+    max-width: auto;
   }
 }
 
@@ -241,7 +247,7 @@
 .divider {
   width: 240px;
   height: 2px;
-  background: #04B4AE;
+  background: #25A5A4;
 }
 
 .about-info {
@@ -259,8 +265,133 @@
   width: 400px;
 }
 
+.shopers {
+  align-items: center;
+  justify-content: center;
+}
+
+.shoper-item__img {
+  max-width: 100%;
+  width: 200px;
+}
+
+.shoper-item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.prueba {
+  background-image: url("/img/individual.png");
+  min-height: 550px;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  background-position: bottom;
+  background-size: cover;
+}
+
+.minilogos {
+  display: flex;
+  justify-content: center;
+}
+
+.minilogos-title {
+  font-size: 35px;
+  color: #25A5A4;
+}
+
+.minilogos-box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 767px) {
+  .minilogos-box {
+    flex-direction: column;
+  }
+}
+
+.minilogo-item {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 200px;
+  margin: 0 10px;
+}
+
+@media screen and (max-width: 767px) {
+  .minilogo-item {
+    max-width: initial;
+    margin-top: 20px;
+  }
+}
+
+.minilogo-item__title {
+  font-weight: bold;
+  color: #ccc;
+  margin-top: 20px;
+}
+
+.minilogo-item__img {
+  width: 60px;
+  max-height: 160px;
+  max-width: 100%;
+}
+
+.owned-btn {
+  font-weight: bold;
+  min-width: 200px;
+  border: 1px solid #ccc;
+  padding: 0.8em 1em;
+  text-align: center;
+  border-style: solid;
+  border-bottom-right-radius: 150px 130px;
+  border-top-left-radius: 150px 130px;
+  cursor: pointer;
+  box-shadow: 5px 5px 8px #ccc;
+  position: relative;
+}
+
+.owned-btn__icon {
+  position: absolute;
+  border-top-left-radius: 150px 130px;
+  border-bottom-right-radius: 150px 150px;
+  cursor: pointer;
+  width: 70px;
+  top: 0;
+  left: 0em;
+  padding: 0.8em 1.6em;
+  background-color: #25A5A4;
+}
+
+.owned-btn__text {
+  margin-left: 30px;
+}
+
+.owned-btn__secondary {
+  width: 150px;
+  min-width: 150px;
+  max-width: 150px;
+  color: #25A5A4;
+  border: 1px solid #25A5A4;
+  font-weight: bold;
+  display: inline-block;
+  text-decoration: none;
+  line-height: 2rem;
+  padding: 0 1rem;
+  margin: 2rem;
+  border-radius: 3rem;
+}
+
 .primary-color {
-  color: #04B4AE;
+  color: #25A5A4;
 }
 
 /*!
