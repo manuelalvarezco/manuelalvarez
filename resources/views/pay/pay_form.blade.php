@@ -21,7 +21,7 @@
                         <input name="currency"      type="hidden"  value="{{$currency}}">
                         <input name="signature"     type="hidden"  value="{{$signature}}">
                         <input name="test"          type="hidden"  value="1">
-                        <input name="responseUrl"   type="hidden"  value="http://127.0.0.1:8000/responsePayU">
+                        <input name="responseUrl"   type="hidden"  value="">
                         <input name="shippingCity"    type="hidden"  value="Bogota">
                         <input name="shippingCountry" type="hidden"  value="CO">
                         <input name="confirmationUrl" type="hidden"  value="http://127.0.0.1:8000/responsePayU">
