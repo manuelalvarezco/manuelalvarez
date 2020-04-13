@@ -21,14 +21,15 @@
   </div>
 
   <h5 class="text-center text-white">
-    <strong>Biowell</strong> es una marca registrada de <strong>Biowellness S.A.S.</strong>
+    <strong class="titulo">Biowell</strong> es una marca registrada de <strong class="titulo">Biowellness S.A.S.</strong>
   </h5>
   <div class="container">
     <div class="d-flex text-center text-white">
       <div class="row mt-2">
         <div class="d-flex col-md-8 box-footer">
-          <div class="d-flex align-items-center">
-            <span class="mt-5">Mayor información en </span> <img width="200" src="{{url('img/biowellnes-white.png')}}" alt=""> 
+          <div class="d-flex align-items-center box-footer-items">
+            <span class="mt-5 titulo">Mayor información en </span> 
+            <img width="200" src="{{url('img/biowellnes-white.png')}}" alt=""> 
           </div>
           <div class="d-flex align-items-center box-footer__iconos">
             <img class="mt-5" width="200" src="{{url('img/footer-bio.png')}}" alt="">

@@ -10,8 +10,8 @@
     <div class="col-md-6 d-flex flex-column align-items-center">
       <img width="250" src="{{url('/img/logo-main.png')}}" alt="logo">
       <div class="d-flex flex-column text-center">
-        <span class="fs-20 primary-color">Crema Humectante</span>
-        <span class="fs-25 text-bold primary-color" >ANTIOXIDANTE</span>
+        <span class="fs-20 subtitulo primary-color">Crema Humectante</span>
+        <span class="fs-25 text-bold primary-color titulo" >ANTIOXIDANTE</span>
         <div class="divider"></div>
         <span  class="fs-25 primary-color">Crema corporal</span>
         <small class="fs-16 primary-color">con extracto de semillas de cáñamo</small>
@@ -95,9 +95,9 @@
         <div class="row">
         <div class="col-md-5 offset-1">
           <img src="{{url('/img/icono.png')}}" width="55" alt="icono">
-          <p class="fs-20">Biowell es una crema corporal con efecto relajante y refrescante que te ayuda a <b>reducir de manera real la sensación
+          <p class="fs-20 subtitulo">Biowell es una crema corporal con efecto relajante y refrescante que te ayuda a <b>reducir de manera real la sensación
             de hinchazón y pesadez,</b> además te ayuda a <b>mejorar visblemente la apariencia de la piel</b></p>
-            <p class="fs-20">Ha sido <b>formulada de manera responsable y eficaz por médicos expertos en investigación. Su fórmula contiene ingredientes naturales
+            <p class="fs-20 subtitulo">Ha sido <b>formulada de manera responsable y eficaz por médicos expertos en investigación. Su fórmula contiene ingredientes naturales
             </b> como aceite de semillas de cáñamo, aceite de almendras, mentol, árnica y extracto de fruta de cafe,
             que brindan múltiples beneficios para tu cuerpo</p>
             <button class="owned-btn">
@@ -115,36 +115,38 @@
       <div class="row mt-2">
           <div class="col-md-12 mt-4 text-center">
             <img width="35" src="{{url('/img/icono-compra.png')}}" alt="biowell">
-            <h5>Recibe Biowell en tu casa</h5>
-            <h2 class="primary-color">Compra online aquí:</h2>
+            <h6>Recibe Biowell en tu casa!</h6>
+            <h2 class="primary-color titulo">Compra online aquí:</h2>
 
             <img width="200" src="{{url('/img/logo-main.png')}}" alt="biowell">
             <div class="mt-2">
 
-              <img width="35" src="{{url('/img/icono-compra.png')}}" alt="biowell">
+              <button class=" owned-btn__secondary">
+                <img width="30" src="{{url('/img/icono-compra.png')}}" alt="biowell"> Comprar
+            </button>
             </div>
             <div class="shopers row">
                 <div class="shoper-item col-md-3">
-                    <img class="shoper-item__img" style="max-width: 100%" src="{{url('/img/logo-linio.png')}}" alt="linio">
-                    <button class="mt-3 owned-btn__secondary">
+                    <img class="mb-2 mb-3 shoper-item__img" style="max-width: 100%" src="{{url('/img/logo-linio.png')}}" alt="linio">
+                    <button class=" owned-btn__secondary">
                         Comprar
                     </button>
                 </div>
                 <div class="shoper-item col-md-3">
                     <img class="shoper-item__img" style="max-width: 100%" src="{{url('/img/logo-biowellness.png')}}" alt="biowellness">
-                    <button class="mt-2 owned-btn__secondary">
+                    <button class=" owned-btn__secondary">
                         Comprar
                     </button>
                 </div>
                 <div class="shoper-item col-md-3">
-                    <img class="shoper-item__img" style="max-width: 100%" src="{{url('/img/sol-verde.png')}}" alt="sol-verde">
-                    <button class="mt-2 owned-btn__secondary">
+                    <img class="shoper-item__img mb-3" style="max-width: 100%" src="{{url('/img/sol-verde.png')}}" alt="sol-verde">
+                    <button class=" owned-btn__secondary">
                         Comprar
                     </button>
                 </div>
                 <div class="shoper-item col-md-3">
                     <img class="shoper-item__img" style="max-width: 100%" src="{{url('/img/logo-falabella.png')}}" alt="falabella">
-                    <button class="mt-2 owned-btn__secondary">
+                    <button class=" owned-btn__secondary">
                         Comprar
                     </button>
                 </div>

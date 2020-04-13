@@ -17,9 +17,6 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    @media screen and(max-width: 767px) {
-        flex-direction: column;
-    }
 }
 
 .minilogo-item {
@@ -37,8 +34,8 @@
 }
 
 .minilogo-item__title {
-    font-weight: bold;
-    color: $gray-color;
+    font-family: $font-family-lato;
+    font-weight: 400;
     margin-top: 20px;
 }
 

@@ -54,7 +54,8 @@
 }
 
 .formulario-imputs__button {
-    font-weight: bold;
+    font-family: $font-family-lato;
+    font-weight: 600;
     color: $primary-color;
     background-color: #fff;
     border-color: #fff;
@@ -77,6 +78,13 @@
     margin-left: 33%;
     @media screen and(max-width: 767px) {
         margin: 0;
+        flex-direction: column;
+    }
+}
+
+.box-footer-items {
+    @media screen and(max-width: 767px) {
+        justify-content: center;
         flex-direction: column;
     }
 }
