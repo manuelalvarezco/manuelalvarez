@@ -4,9 +4,92 @@
 
 
 @section('content')
-    <main-component></main-component>
+<div class="container" style="padding-bottom: 0;">
+  <div class="main">
+  <div class="row">
+    <div class="col-md-6 d-flex flex-column align-items-center">
+      <img width="250" src="{{url('/img/logo-main.png')}}" alt="logo">
+      <div class="d-flex flex-column text-center">
+        <span class="fs-20 primary-color">Crema Humectante</span>
+        <span class="fs-25 text-bold primary-color" >ANTIOXIDANTE</span>
+        <div class="divider"></div>
+        <span  class="fs-25 primary-color">Crema corporal</span>
+        <small class="fs-16 primary-color">con extracto de semillas de cáñamo</small>
+        <div class="d-flex justify-content-center mt-4">
+          <a href="#">
+          <img width="70" src="{{url('/img/instagram.png')}}" alt="instagram">
+          </a>
+          <a href="#">
+          <img width="70" src="{{url('/img/facebook.png')}}" alt="facebook">
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 d-flex justify-content-center">
+      <img style="max-width:100%" width="620" src="{{url('/img/producto.png')}}" alt="producto">
+    </div>
+    
+  </div>
+  <div style="min-height:100px" class="row mt-4 d-flex justify-content-center">
+    <div class="about-info">
+      <a href="#" style="text-decoration:none;color:white">
+        <span class="fs-25">
+        Equilibra tu piel con <strong>Biowell</strong>
+        </span>
+      </a>
+    </div>
+    </div>
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-md-12 d-flex justify-content-center">
+          <div class="d-flex">
+            <div class="group">
+              <div class="d-flex align-items-center ml-2 mr-2">
+                <img src="{{url('/img/icono.png')}}" width="55" alt="icono">
+                <span class="fs-22">Relajante</span>
+              </div>
+            </div>
+            <div class="group">
+              <div class="d-flex align-items-center ml-2 mr-2">
+                <img src="{{url('/img/icono.png')}}" width="55" alt="icono">
+                <span class="fs-22">Humectante</span>
+              </div>
+            </div>
+            <div class="group">
+              <div class="d-flex align-items-center ml-2 mr-2">
+                <img src="{{url('/img/icono.png')}}" width="55" alt="icono">
+                <span class="fs-22">Refrescante</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    
+</div>
     <div class="mb-4">
-        <register-component></register-component>
+      <div class="footer">
+        <div class="contenedor">
+          <section class="logo">
+            <img class="logo-img" src="{{url('/img/icono-blanco.png')}}" alt="biowwell">
+          </section>
+          <section class="formulario">
+            <h3 class="titulo">
+              Regístrate y recibe los mejores concejos médicos para aumentar tu bienestar y relajación
+            </h3>
+            <div class="formulario-imputs">
+              <label class="formulario-imputs__label" for="email">Tu correo electrónico</label>
+              <input type="text" class="formulario-imputs__input" placeholder="Correo electrónico">
+              <div class="formulario-imputs__box">
+                <input type="checkbox" class="formulario-imputs__checkbox" name="term" id="term">
+                <label class="terms" for="term">Acepto la política de protección de datos personales</label>
+              </div>
+              <button class="formulario-imputs__button">REGISTRARME</button>
+            </div>
+          </section>
+        </div>
+      </div>
     </div>
     <div class="container">
         <div class="row">
@@ -99,8 +182,94 @@
 
       
     <div class="mt-4 mb-4">
-        <ingredients-component></ingredients-component>
+      <div class="">
+        <h3 class="ingredients-title text-center mt-4 mb-4">Ingredientes naturales</h3>
+        <div class="ingredients mt-5">
+          <div class="ingredients-box">
+              <div class="box-item">
+                <img src="{{url('/img/canamo.jpg')}}" alt="image" class="box-item__img">
+                <h5 class="box-item__title">
+                  Semilla de camaño
+                </h5>
+                <span class="box-item__subtitle">
+                  Propiedades nutricionales y antioxidantes
+                </span>
+              </div>
+              <div class="box-item">
+                <img src="{{url('/img/almendras.jpg')}}" alt="image" class="box-item__img">
+                <h5 class="box-item__title">
+                  Aceite de almendras
+                </h5>
+                <span class="box-item__subtitle">
+                  Propiedades nutricionales y acondicionadoras
+                </span>
+              </div>
+              <div class="box-item">
+                <img src="{{url('/img/mentol.jpg')}}" alt="image" class="box-item__img">
+                <h5 class="box-item__title">
+                  Mentol
+                </h5>
+                <span class="box-item__subtitle">
+                  Propiedades nutricionales y anticépticas
+                </span>
+              </div>
+              <div class="box-item">
+                <img src="{{url('/img/cafe.jpg')}}" alt="image" class="box-item__img">
+                <h5 class="box-item__title">
+                  Mucílago de café
+                </h5>
+                <span class="box-item__subtitle">
+                  Propiedades antioxidantes
+                </span>
+              </div>
+              <div class="box-item">
+                <img src="{{url('/img/florarnica.jpg')}}" alt="image" class="box-item__img">
+                <h5 class="box-item__title">
+                  Flor árnica
+                </h5>
+                <span class="box-item__subtitle">
+                  Propiedades análgesicas y antiinflamatorias
+                </span>
+              </div>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <mini-logo-component></mini-logo-component>
+    <div class="mt-4">
+      <div class="minilogos mt-5">
+        <div class="minilogos-box mt-5">
+            <div class="minilogo-item">
+              <img src="{{url('/img/minilogo1.png')}}" alt="image" class="minilogo-item__img">
+              <h5 class="minilogo-item__title">
+                Contiene <br> ingredientes <br> naturales
+              </h5>
+            </div>
+            <div class="minilogo-item">
+              <img src="{{url('/img/minilogo2.png')}}" alt="image" class="minilogo-item__img">
+              <h5 class="minilogo-item__title">
+                No ha sido probada <br> en animales y <br> es libre de crueldad
+              </h5>
+            </div>
+            <div class="minilogo-item">
+              <img src="{{url('/img/minilogo3.png')}}" alt="image" class="minilogo-item__img">
+              <h5 class="minilogo-item__title">
+                Es libre de <br> parabenos
+              </h5>
+            </div>
+            <div class="minilogo-item">
+              <img src="{{url('/img/minilogo4.png')}}" alt="image" class="minilogo-item__img">
+              <h5 class="minilogo-item__title">
+                No contiene <br> colorantes <br> artificiales
+              </h5>
+            </div>
+            <div class="minilogo-item">
+              <img src="{{url('/img/minilogo5.png')}}" alt="image" class="minilogo-item__img">
+              <h5 class="minilogo-item__title">
+                Producto <br> 100% colombiano
+              </h5>
+            </div>
+        </div>
+      </div>
+    </div>
 @endsection
