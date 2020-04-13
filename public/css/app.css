@@ -221,7 +221,6 @@
 }
 
 .main {
-  background-image: url(/images/main.png?cf345dbc78d5a67b29572565b0d0f771);
   min-height: 550px;
   background-repeat: no-repeat;
   background-position: bottom;
@@ -257,7 +256,6 @@
   color: white;
   font-weight: bold;
   position: absolute;
-  background-image: url(/images/bg-button.png?f4426c9336ecddab94c2f1aea8dc676c);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -283,7 +281,7 @@
 }
 
 .prueba {
-  background-image: url(/images/individual.png?e1c429107e7b87fbceec2ce1d164adb6);
+  background-image: url("/img/individual.png");
   min-height: 550px;
   background-repeat: no-repeat;
   display: flex;

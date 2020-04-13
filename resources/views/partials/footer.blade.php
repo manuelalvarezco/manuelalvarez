@@ -27,11 +27,11 @@
     <div class="d-flex text-center text-white">
       <div class="row mt-2">
         <div class="d-flex col-md-8 box-footer">
-          <p>Mayor información en <span class="box-footer__title">Biowellness</span></p>
+          <div class="d-flex align-items-center">
+            <span class="mt-5">Mayor información en </span> <img width="200" src="{{url('img/biowellnes-white.png')}}" alt=""> 
+          </div>
           <div class="d-flex align-items-center box-footer__iconos">
-            <span>Instagram</span>
-            <span>Facebook</span>
-            <a class="box-footer__ancla" style="font-size: 30px;font-weight: bold;text-decoration: none;color:white" href="#">Biowell.co</a>
+            <img class="mt-5" width="200" src="{{url('img/footer-bio.png')}}" alt="">
           </div>
       </div>
       </div>

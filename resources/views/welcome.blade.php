@@ -5,7 +5,7 @@
 
 @section('content')
 <div class="container" style="padding-bottom: 0;">
-  <div class="main">
+  <div class="main" style="background-image: url('./img/main.png')">
   <div class="row">
     <div class="col-md-6 d-flex flex-column align-items-center">
       <img width="250" src="{{url('/img/logo-main.png')}}" alt="logo">
@@ -31,7 +31,7 @@
     
   </div>
   <div style="min-height:100px" class="row mt-4 d-flex justify-content-center">
-    <div class="about-info">
+    <div class="about-info" style="background-image: url('./img/bg-button.png')">
       <a href="#" style="text-decoration:none;color:white">
         <span class="fs-25">
         Equilibra tu piel con <strong>Biowell</strong>
@@ -107,18 +107,22 @@
                 <span class="owned-btn__text">Comprar</span>
             </button>
         </div>
-        <div class="col-md-6 prueba">
+        <div class="col-md-6 d-flex justify-content-center">
+          <img style="max-width:100%" width="620" src="{{url('/img/individual.png')}}" alt="producto">
         </div>
       </div>
 
-      <div class="row mt-5">
-          <div class="col-md-12 mt-5 text-center">
-            <img width="100" src="{{url('/img/logo-main.png')}}" alt="biowell">
+      <div class="row mt-2">
+          <div class="col-md-12 mt-4 text-center">
+            <img width="35" src="{{url('/img/icono-compra.png')}}" alt="biowell">
             <h5>Recibe Biowell en tu casa</h5>
             <h2 class="primary-color">Compra online aquí:</h2>
 
             <img width="200" src="{{url('/img/logo-main.png')}}" alt="biowell">
+            <div class="mt-2">
 
+              <img width="35" src="{{url('/img/icono-compra.png')}}" alt="biowell">
+            </div>
             <div class="shopers row">
                 <div class="shoper-item col-md-3">
                     <img class="shoper-item__img" style="max-width: 100%" src="{{url('/img/logo-linio.png')}}" alt="linio">
@@ -133,7 +137,7 @@
                     </button>
                 </div>
                 <div class="shoper-item col-md-3">
-                    <img class="shoper-item__img" style="max-width: 100%" src="{{url('/img/logo-falabella.png')}}" alt="falabella">
+                    <img class="shoper-item__img" style="max-width: 100%" src="{{url('/img/sol-verde.png')}}" alt="sol-verde">
                     <button class="mt-2 owned-btn__secondary">
                         Comprar
                     </button>
