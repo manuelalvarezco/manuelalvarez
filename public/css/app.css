@@ -221,7 +221,7 @@
 }
 
 .main {
-  background-image: url("/img/bg-main.png");
+  background-image: url(/images/bg-main.png?cf345dbc78d5a67b29572565b0d0f771);
   min-height: 550px;
   background-repeat: no-repeat;
   background-position: bottom;
@@ -257,7 +257,7 @@
   color: white;
   font-weight: bold;
   position: absolute;
-  background-image: url(/img/bg-button.png);
+  background-image: url(/images/bg-button.png?f4426c9336ecddab94c2f1aea8dc676c);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

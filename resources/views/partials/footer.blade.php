@@ -2,7 +2,7 @@
 <div class="footer mt-5">
   <div class="contenedor">
     <section class="logo">
-      <img class="logo-img" src="/img/icono-blanco.png" alt="biowell">
+      <img class="logo-img" src="{{url('/img/icono-blanco.png')}}" alt="biowell">
     </section>
     <section class="formulario">
       <h3 class="titulo">
