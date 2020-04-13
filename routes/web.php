@@ -22,3 +22,4 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/pay', 'PayController@pay')->name('pay');
+Route::get('/responsePayU', 'PayController@responsePayU')->name('responsePayU');
