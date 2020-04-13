@@ -239,6 +239,12 @@
   font-size: 22px;
 }
 
+@media screen and (max-width: 767px) {
+  .fs-22 {
+    font-size: 0.8em;
+  }
+}
+
 .fs-25 {
   font-size: 25px;
 }
@@ -261,6 +267,12 @@
   background-position: center;
   height: 90px;
   width: 400px;
+}
+
+@media screen and (mix-width: 767px) {
+  .ml-owned {
+    margin-left: 0.5rem !important;
+  }
 }
 
 .shopers {
@@ -298,6 +310,12 @@
 .minilogos-title {
   font-size: 35px;
   color: #25A5A4;
+}
+
+@media screen and (mix-width: 767px) {
+  .minilogos-title {
+    margin-top: 3rem !important;
+  }
 }
 
 .minilogos-box {

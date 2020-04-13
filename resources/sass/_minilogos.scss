@@ -6,6 +6,9 @@
 .minilogos-title {
     font-size: 35px;
     color: $primary-color;
+    @media screen and(mix-width: 767px) {
+        margin-top: 3rem !important;
+    }
 }
 
 .minilogos-box {

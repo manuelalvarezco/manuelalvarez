@@ -44,19 +44,19 @@
         <div class="col-md-12 d-flex justify-content-center">
           <div class="d-flex">
             <div class="group">
-              <div class="d-flex align-items-center ml-2 mr-2">
+              <div class="d-flex align-items-center ml-owned mr-2">
                 <img src="{{url('/img/icono.png')}}" width="55" alt="icono">
                 <span class="fs-22">Relajante</span>
               </div>
             </div>
             <div class="group">
-              <div class="d-flex align-items-center ml-2 mr-2">
+              <div class="d-flex align-items-center ml-owned mr-2">
                 <img src="{{url('/img/icono.png')}}" width="55" alt="icono">
                 <span class="fs-22">Humectante</span>
               </div>
             </div>
             <div class="group">
-              <div class="d-flex align-items-center ml-2 mr-2">
+              <div class="d-flex align-items-center ml-owned mr-2">
                 <img src="{{url('/img/icono.png')}}" width="55" alt="icono">
                 <span class="fs-22">Refrescante</span>
               </div>
@@ -158,7 +158,7 @@
           <div class="col-md-12 d-flex justify-content-center">
             <div class="d-flex">
               <div class="group">
-                <div class="d-flex align-items-center ml-2 mr-2">
+                <div class="d-flex align-items-center ml-owned mr-2">
                   <img src="{{url('/img/icono.png')}}" width="55" alt="icono">
                   <span class="fs-22">Relajante</span>
                 </div>
@@ -170,7 +170,7 @@
                 </div>
               </div>
               <div class="group">
-                <div class="d-flex align-items-center ml-2 mr-2">
+                <div class="d-flex align-items-center ml-owned mr-2">
                   <img src="{{url('/img/icono.png')}}" width="55" alt="icono">
                   <span class="fs-22">Refrescante</span>
                 </div>
@@ -241,8 +241,8 @@
     </div>
 
     <div class="mt-4">
-      <div class="minilogos mt-5">
-        <div class="minilogos-box mt-5">
+      <div class="minilogos">
+        <div class="minilogos-box">
             <div class="minilogo-item">
               <img src="{{url('/img/minilogo1.png')}}" alt="image" class="minilogo-item__img">
               <h5 class="minilogo-item__title">

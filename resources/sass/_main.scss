@@ -14,7 +14,10 @@
 }
 
 .fs-22 {
-    font-size: 22px
+    font-size: 22px;
+    @media screen and(max-width: 767px) {
+        font-size: .8em;
+    }
 }
 
 .fs-25 {
@@ -39,4 +42,10 @@
     background-position: center;
     height: 90px;
     width: 400px;
+}
+
+.ml-owned {
+    @media screen and(mix-width: 767px) {
+        margin-left: 0.5rem !important;
+    }
 }
