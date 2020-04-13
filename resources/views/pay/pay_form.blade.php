@@ -21,10 +21,10 @@
                         <input name="currency"      type="hidden"  value="{{$currency}}">
                         <input name="signature"     type="hidden"  value="{{$signature}}">
                         <input name="test"          type="hidden"  value="1">
-                        <input name="responseUrl"   type="hidden"  value="">
+                        <input name="responseUrl"   type="hidden"  value="{{url('/')}}">
                         <input name="shippingCity"    type="hidden"  value="Bogota">
                         <input name="shippingCountry" type="hidden"  value="CO">
-                        <input name="confirmationUrl" type="hidden"  value="http://127.0.0.1:8000/responsePayU">
+                        <input name="confirmationUrl" type="hidden"  value="{{url('responsePayU')}}">
                         <div class="col-md-12">
                             Para efectuar el pago sera dirigido a la plataforma <img width="60" src="{{asset('img/payu2x.png')}}" alt="">
                         </div>
