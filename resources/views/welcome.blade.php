@@ -32,11 +32,11 @@
   </div>
   <div style="min-height:100px" class="row mt-4 d-flex justify-content-center">
     <div class="about-info" style="background-image: url('./img/bg-button.png')">
-      <a href="#" style="text-decoration:none;color:white">
+      <button class="btn" style="text-decoration:none;color:white" type="button" data-toggle="modal" data-target="#exampleModal">
         <span class="fs-25">
         Equilibra tu piel con <strong>Biowell</strong>
         </span>
-      </a>
+      </button>
     </div>
     </div>
     <div class="container mt-5">
@@ -100,7 +100,7 @@
             <p class="fs-20 subtitulo">Ha sido <b>formulada de manera responsable y eficaz por médicos expertos en investigación. Su fórmula contiene ingredientes naturales
             </b> como aceite de semillas de cáñamo, aceite de almendras, mentol, árnica y extracto de fruta de cafe,
             que brindan múltiples beneficios para tu cuerpo</p>
-            <button class="owned-btn">
+            <button class="owned-btn" type="button" data-toggle="modal" data-target="#exampleModal">
                 <div class="owned-btn__icon">
                     <img width="25" src="{{url('/img/whatsapp-icon-white.png')}}" alt="contactanos">
                 </div>
@@ -121,32 +121,32 @@
             <img width="200" src="{{url('/img/logo-main.png')}}" alt="biowell">
             <div class="mt-2">
 
-              <button class=" owned-btn__secondary">
+              <button class=" owned-btn__secondary" type="button" data-toggle="modal" data-target="#exampleModal">
                 <img width="30" src="{{url('/img/icono-compra.png')}}" alt="biowell"> Comprar
             </button>
             </div>
             <div class="shopers row">
                 <div class="shoper-item col-md-3">
                     <img class="mb-2 mb-3 shoper-item__img" style="max-width: 100%" src="{{url('/img/logo-linio.png')}}" alt="linio">
-                    <button class=" owned-btn__secondary">
+                    <button class=" owned-btn__secondary" type="button" data-toggle="modal" data-target="#exampleModal">
                         Comprar
                     </button>
                 </div>
                 <div class="shoper-item col-md-3">
                     <img class="shoper-item__img" style="max-width: 100%" src="{{url('/img/logo-biowellness.png')}}" alt="biowellness">
-                    <button class=" owned-btn__secondary">
+                    <button class=" owned-btn__secondary" type="button" data-toggle="modal" data-target="#exampleModal">
                         Comprar
                     </button>
                 </div>
                 <div class="shoper-item col-md-3">
                     <img class="shoper-item__img mb-3" style="max-width: 100%" src="{{url('/img/sol-verde.png')}}" alt="sol-verde">
-                    <button class=" owned-btn__secondary">
+                    <button class=" owned-btn__secondary" type="button" data-toggle="modal" data-target="#exampleModal">
                         Comprar
                     </button>
                 </div>
                 <div class="shoper-item col-md-3">
                     <img class="shoper-item__img" style="max-width: 100%" src="{{url('/img/logo-falabella.png')}}" alt="falabella">
-                    <button class=" owned-btn__secondary">
+                    <button class=" owned-btn__secondary" type="button" data-toggle="modal" data-target="#exampleModal">
                         Comprar
                     </button>
                 </div>
@@ -278,4 +278,17 @@
         </div>
       </div>
     </div>
+
+
+    <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        Para efectuar el pago sera dirigido a la plataforma <img width="60" src="{{asset('img/payu2x.png')}}" alt="payu">
+      </div>
+      <pay-form-component></pay-form-component>
+    </div>
+  </div>
+</div>
 @endsection
