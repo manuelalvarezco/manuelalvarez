@@ -10,8 +10,9 @@ use DB;
 
 class PayController extends Controller
 {
-    public function pay()
+    public function pay(Request $request)
     {
+
         $parameters = DB::table('payuParameters')->first();
 
         $time          = Carbon::now();
@@ -20,11 +21,23 @@ class PayController extends Controller
         $merchantId    = $parameters->merchantId;
         $accountId     = $parameters->accountId;
         $currency      = "COP";
-        $amount        = "20000";
+        $amount        = $request->amount;
+
 
         $signature = md5($apiKey."~".$merchantId."~".$referenceCode."~".$amount."~".$currency);
+        
+        $data = array(
+            'amount' => $amount,
+            'signature' => $signature,
+            'referenceCode' => $referenceCode,
+            'merchantId' => $merchantId,
+            'accountId' => $accountId,
+            'currency' => $currency
+        );
 
-        return view('pay.pay_form', compact('amount', 'signature', 'referenceCode', 'merchantId', 'accountId', 'currency'));
+
+        return response()->json($data);
+        //return view('pay.pay_form', compact('amount', 'signature', 'referenceCode', 'merchantId', 'accountId', 'currency'));
     }
 
     public function responsePayU()

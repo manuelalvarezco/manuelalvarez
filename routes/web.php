@@ -20,6 +20,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::view('/gracias', 'gracias');
 
-Route::get('/pay', 'PayController@pay')->name('pay');
+Route::resource('/customers','CustomerController');
+
+Route::post('/pay', 'PayController@pay');
 Route::post('/responsePayU', 'PayController@responsePayU')->name('responsePayU');

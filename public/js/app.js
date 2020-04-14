@@ -2184,9 +2184,64 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
+      count: 1,
+      payu: {
+        price: 20000,
+        amount: 20000,
+        tax: 0,
+        description: 'Crema Corporal Biowell',
+        taxReturnBase: 0,
+        test: 1,
+        responseUrl: 'https://ecommerce.biowell.co/biowellness/public/gracias',
+        shippingCity: 'Bogota',
+        shippingCountry: 'CO',
+        confirmationUrl: 'https://ecommerce.biowell.co/biowellness/public/responsePayU'
+      },
+      parameters: [],
       valid: true,
       phone: '',
       phoneRules: [function (v) {
@@ -2211,15 +2266,39 @@ __webpack_require__.r(__webpack_exports__);
       checkbox: false
     };
   },
+  mounted: function mounted() {
+    var _this = this;
+
+    var amount = this.payu.amount;
+    axios.post('/pay', amount).then(function (resp) {
+      _this.parameters = resp.data;
+    });
+  },
   methods: {
-    validate: function validate() {
-      this.$refs.form.validate();
+    formatPrice: function formatPrice(value) {
+      var val = (value / 1).toFixed(2).replace('.', ',');
+      return val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
     },
-    reset: function reset() {
-      this.$refs.form.reset();
+    add: function add() {
+      this.count = this.count + 1;
+      this.payu.amount = this.payu.price * this.count;
+      this.getParameters(this.payu.amount);
     },
-    resetValidation: function resetValidation() {
-      this.$refs.form.resetValidation();
+    res: function res() {
+      if (this.count > 1) {
+        this.count = this.count - 1;
+        this.payu.amount = this.payu.price * this.count;
+        this.getParameters(this.payu.amount);
+      }
+    },
+    getParameters: function getParameters(amount) {
+      var _this2 = this;
+
+      axios.post('/pay', {
+        'amount': amount
+      }).then(function (resp) {
+        _this2.parameters = resp.data;
+      });
     }
   }
 });
@@ -2255,13 +2334,32 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-/* harmony default export */ __webpack_exports__["default"] = ({});
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      email: '',
+      saved: false,
+      message: 'Regístrate y recibe los mejores concejos médicos para aumentar tu bienestar y relajación'
+    };
+  },
+  methods: {
+    guardar: function guardar() {
+      var _this = this;
+
+      var params = {
+        email: this.email
+      };
+      this.email = '';
+      axios.post('/customers', params).then(function (resp) {
+        _this.message = 'Gracias por registrarte, pronto estaremos en contacto';
+        _this.saved = true;
+      })["catch"](function (error) {
+        _this.message = 'Gracias por registrarte, pronto estaremos en contacto';
+        _this.saved = true;
+      });
+    }
+  }
+});
 
 /***/ }),
 
@@ -40594,114 +40692,475 @@ var render = function() {
     "div",
     { staticClass: "container mt-2" },
     [
-      _c(
-        "v-app",
-        [
+      _c("v-app", [
+        _c("div", { staticClass: "container " }, [
+          _c("div", { staticClass: "col-md-12 text-center" }, [
+            _c("h2", { staticClass: "titulo primary-color" }, [
+              _vm._v(_vm._s(_vm.payu.description))
+            ])
+          ]),
+          _vm._v(" "),
           _c(
-            "v-form",
+            "div",
             {
-              ref: "form",
-              attrs: { "lazy-validation": "" },
-              model: {
-                value: _vm.valid,
-                callback: function($$v) {
-                  _vm.valid = $$v
-                },
-                expression: "valid"
-              }
+              staticClass: "d-flex justify-content-between align-items-center"
             },
             [
-              _c("v-text-field", {
-                attrs: {
-                  rules: _vm.namesRules,
-                  label: "Nombre completo",
-                  required: ""
-                },
-                model: {
-                  value: _vm.names,
-                  callback: function($$v) {
-                    _vm.names = $$v
+              _c("div", { staticClass: "contador" }, [
+                _c(
+                  "div",
+                  {
+                    staticClass: "d-flex justify-content-around",
+                    staticStyle: { width: "100%" }
                   },
-                  expression: "names"
-                }
-              }),
+                  [
+                    _c(
+                      "v-btn",
+                      {
+                        staticClass: "item-contador",
+                        attrs: { icon: "", color: "pink" },
+                        on: { click: _vm.res }
+                      },
+                      [_c("v-icon", [_vm._v("remove")])],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c("span", [_vm._v(_vm._s(_vm.count))]),
+                    _vm._v(" "),
+                    _c(
+                      "v-btn",
+                      {
+                        staticClass: "item-contador",
+                        attrs: { icon: "", color: "indigo" },
+                        on: { click: _vm.add }
+                      },
+                      [_c("v-icon", [_vm._v("add_shopping_cart")])],
+                      1
+                    )
+                  ],
+                  1
+                )
+              ]),
               _vm._v(" "),
-              _c("v-text-field", {
-                attrs: {
-                  rules: _vm.emailRules,
-                  label: "Correo electrónio",
-                  required: ""
-                },
-                model: {
-                  value: _vm.email,
-                  callback: function($$v) {
-                    _vm.email = $$v
+              _c("div", { staticClass: "amount" }, [
+                _c(
+                  "h3",
+                  {
+                    staticClass: "titulo",
+                    staticStyle: { color: "rgb(144, 141, 141)" }
                   },
-                  expression: "email"
-                }
-              }),
-              _vm._v(" "),
-              _c("v-text-field", {
-                attrs: {
-                  rules: _vm.phoneRules,
-                  label: "Teléfono",
-                  required: ""
-                },
-                model: {
-                  value: _vm.phone,
-                  callback: function($$v) {
-                    _vm.phone = $$v
-                  },
-                  expression: "phone"
-                }
-              }),
-              _vm._v(" "),
-              _c("v-text-field", {
-                attrs: {
-                  rules: _vm.deliveryRules,
-                  label: "Dirección",
-                  required: ""
-                },
-                model: {
-                  value: _vm.delivery,
-                  callback: function($$v) {
-                    _vm.delivery = $$v
-                  },
-                  expression: "delivery"
-                }
-              }),
-              _vm._v(" "),
-              _c(
-                "div",
-                { staticClass: "d-flex justify-content-around" },
-                [
-                  _c(
-                    "v-btn",
-                    {
-                      staticClass: "mr-4",
-                      attrs: { disabled: !_vm.valid, color: "success" },
-                      on: { click: _vm.validate }
-                    },
-                    [_vm._v("\n        Continuar\n      ")]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "button",
-                    {
-                      staticClass: "btn btn-outline-secondary",
-                      attrs: { type: "button", "data-dismiss": "modal" }
-                    },
-                    [_vm._v("Cancelar")]
-                  )
-                ],
-                1
-              )
-            ],
-            1
+                  [
+                    _vm._v(
+                      "\n            $" +
+                        _vm._s(_vm.formatPrice(_vm.payu.amount)) +
+                        "\n          "
+                    )
+                  ]
+                )
+              ])
+            ]
           )
-        ],
-        1
-      )
+        ]),
+        _vm._v(" "),
+        _c(
+          "form",
+          {
+            attrs: {
+              method: "post",
+              action: "https://gateway.payulatam.com/ppp-web-gateway"
+            }
+          },
+          [
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.parameters.merchantId,
+                  expression: "parameters.merchantId"
+                }
+              ],
+              attrs: { name: "merchantId", type: "hidden" },
+              domProps: { value: _vm.parameters.merchantId },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.parameters, "merchantId", $event.target.value)
+                }
+              }
+            }),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.parameters.accountId,
+                  expression: "parameters.accountId"
+                }
+              ],
+              attrs: { name: "accountId", type: "hidden" },
+              domProps: { value: _vm.parameters.accountId },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.parameters, "accountId", $event.target.value)
+                }
+              }
+            }),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.payu.description,
+                  expression: "payu.description"
+                }
+              ],
+              attrs: { name: "description", type: "hidden" },
+              domProps: { value: _vm.payu.description },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.payu, "description", $event.target.value)
+                }
+              }
+            }),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.parameters.referenceCode,
+                  expression: "parameters.referenceCode"
+                }
+              ],
+              attrs: { name: "referenceCode", type: "hidden" },
+              domProps: { value: _vm.parameters.referenceCode },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.parameters, "referenceCode", $event.target.value)
+                }
+              }
+            }),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.parameters.amount,
+                  expression: "parameters.amount"
+                }
+              ],
+              attrs: { name: "amount", type: "hidden" },
+              domProps: { value: _vm.parameters.amount },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.parameters, "amount", $event.target.value)
+                }
+              }
+            }),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.payu.tax,
+                  expression: "payu.tax"
+                }
+              ],
+              attrs: { name: "tax", type: "hidden" },
+              domProps: { value: _vm.payu.tax },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.payu, "tax", $event.target.value)
+                }
+              }
+            }),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.payu.taxReturnBase,
+                  expression: "payu.taxReturnBase"
+                }
+              ],
+              attrs: { name: "taxReturnBase", type: "hidden" },
+              domProps: { value: _vm.payu.taxReturnBase },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.payu, "taxReturnBase", $event.target.value)
+                }
+              }
+            }),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.parameters.currency,
+                  expression: "parameters.currency"
+                }
+              ],
+              attrs: { name: "currency", type: "hidden" },
+              domProps: { value: _vm.parameters.currency },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.parameters, "currency", $event.target.value)
+                }
+              }
+            }),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.parameters.signature,
+                  expression: "parameters.signature"
+                }
+              ],
+              attrs: { name: "signature", type: "hidden" },
+              domProps: { value: _vm.parameters.signature },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.parameters, "signature", $event.target.value)
+                }
+              }
+            }),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.payu.test,
+                  expression: "payu.test"
+                }
+              ],
+              attrs: { name: "test", type: "hidden" },
+              domProps: { value: _vm.payu.test },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.payu, "test", $event.target.value)
+                }
+              }
+            }),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.payu.responseUrl,
+                  expression: "payu.responseUrl"
+                }
+              ],
+              attrs: { name: "responseUrl", type: "hidden" },
+              domProps: { value: _vm.payu.responseUrl },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.payu, "responseUrl", $event.target.value)
+                }
+              }
+            }),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.payu.shippingCity,
+                  expression: "payu.shippingCity"
+                }
+              ],
+              attrs: { name: "shippingCity", type: "hidden" },
+              domProps: { value: _vm.payu.shippingCity },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.payu, "shippingCity", $event.target.value)
+                }
+              }
+            }),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.payu.shippingCountry,
+                  expression: "payu.shippingCountry"
+                }
+              ],
+              attrs: { name: "shippingCountry", type: "hidden" },
+              domProps: { value: _vm.payu.shippingCountry },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.payu, "shippingCountry", $event.target.value)
+                }
+              }
+            }),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.payu.confirmationUrl,
+                  expression: "payu.confirmationUrl"
+                }
+              ],
+              attrs: { name: "confirmationUrl", type: "hidden" },
+              domProps: { value: _vm.payu.confirmationUrl },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.payu, "confirmationUrl", $event.target.value)
+                }
+              }
+            }),
+            _vm._v(" "),
+            _c("v-text-field", {
+              attrs: {
+                name: "buyerFullName",
+                rules: _vm.namesRules,
+                label: "Nombre completo",
+                required: ""
+              },
+              model: {
+                value: _vm.names,
+                callback: function($$v) {
+                  _vm.names = $$v
+                },
+                expression: "names"
+              }
+            }),
+            _vm._v(" "),
+            _c("v-text-field", {
+              attrs: {
+                name: "buyerEmail",
+                rules: _vm.emailRules,
+                label: "Correo electrónio",
+                required: ""
+              },
+              model: {
+                value: _vm.email,
+                callback: function($$v) {
+                  _vm.email = $$v
+                },
+                expression: "email"
+              }
+            }),
+            _vm._v(" "),
+            _c("v-text-field", {
+              attrs: {
+                name: "telephone",
+                rules: _vm.phoneRules,
+                label: "Teléfono",
+                required: ""
+              },
+              model: {
+                value: _vm.phone,
+                callback: function($$v) {
+                  _vm.phone = $$v
+                },
+                expression: "phone"
+              }
+            }),
+            _vm._v(" "),
+            _c("v-text-field", {
+              attrs: {
+                name: "shippingAddress",
+                rules: _vm.deliveryRules,
+                label: "Dirección de envío",
+                required: ""
+              },
+              model: {
+                value: _vm.delivery,
+                callback: function($$v) {
+                  _vm.delivery = $$v
+                },
+                expression: "delivery"
+              }
+            }),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "d-flex justify-content-around" },
+              [
+                _c(
+                  "v-btn",
+                  {
+                    staticClass: "mr-4",
+                    attrs: {
+                      disabled: !_vm.valid,
+                      color: "success",
+                      type: "submit"
+                    }
+                  },
+                  [_vm._v("\n        Continuar\n      ")]
+                ),
+                _vm._v(" "),
+                _c(
+                  "button",
+                  {
+                    staticClass: "btn btn-outline-secondary",
+                    attrs: { type: "button", "data-dismiss": "modal" }
+                  },
+                  [_vm._v("Cancelar")]
+                )
+              ],
+              1
+            )
+          ],
+          1
+        )
+      ])
     ],
     1
   )
@@ -40728,59 +41187,96 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("v-app", [
-    _c("div", { staticClass: "footer" }, [
-      _c("div", { staticClass: "contenedor" }, [
-        _c("section", { staticClass: "logo" }, [
-          _c("img", {
-            staticClass: "logo-img",
-            attrs: { src: "/img/icono-blanco.png", alt: "biowwell" }
-          })
-        ]),
-        _vm._v(" "),
-        _c("section", { staticClass: "formulario" }, [
-          _c("h3", { staticClass: "titulo" }, [
-            _vm._v(
-              "\n          Regístrate y recibe los mejores concejos médicos para aumentar tu bienestar y relajación\n        "
-            )
-          ]),
+  return _c("section", { staticClass: "formulario" }, [
+    _c(
+      "h3",
+      {
+        staticClass: "titulo",
+        class: _vm.saved ? "text-warning" : "text-white"
+      },
+      [_vm._v("\n      " + _vm._s(_vm.message) + "\n    ")]
+    ),
+    _vm._v(" "),
+    _c(
+      "form",
+      {
+        on: {
+          submit: function($event) {
+            $event.preventDefault()
+            return _vm.guardar($event)
+          }
+        }
+      },
+      [
+        _c("div", { staticClass: "formulario-imputs" }, [
+          _c(
+            "label",
+            {
+              staticClass: "formulario-imputs__label",
+              attrs: { for: "email" }
+            },
+            [_vm._v("Tu correo electrónico")]
+          ),
           _vm._v(" "),
-          _c("div", { staticClass: "formulario-imputs" }, [
-            _c(
-              "label",
+          _c("input", {
+            directives: [
               {
-                staticClass: "formulario-imputs__label",
-                attrs: { for: "email" }
-              },
-              [_vm._v("Tu correo electrónico")]
-            ),
-            _vm._v(" "),
-            _c("input", {
-              staticClass: "formulario-imputs__input",
-              attrs: { type: "text", placeholder: "Correo electrónico" }
-            }),
-            _vm._v(" "),
-            _c("div", { staticClass: "formulario-imputs__box" }, [
-              _c("input", {
-                staticClass: "formulario-imputs__checkbox",
-                attrs: { type: "checkbox", name: "term", id: "term" }
-              }),
-              _vm._v(" "),
-              _c("label", { staticClass: "terms", attrs: { for: "term" } }, [
-                _vm._v("Acepto la política de protección de datos personales")
-              ])
-            ]),
-            _vm._v(" "),
-            _c("button", { staticClass: "formulario-imputs__button" }, [
-              _vm._v("REGISTRARME")
-            ])
-          ])
+                name: "model",
+                rawName: "v-model",
+                value: _vm.email,
+                expression: "email"
+              }
+            ],
+            staticClass: "formulario-imputs__input",
+            attrs: {
+              type: "text",
+              name: "email",
+              required: "",
+              placeholder: "Correo electrónico"
+            },
+            domProps: { value: _vm.email },
+            on: {
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.email = $event.target.value
+              }
+            }
+          }),
+          _vm._v(" "),
+          _vm._m(0),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "formulario-imputs__button",
+              attrs: { type: "submit" }
+            },
+            [_vm._v("REGISTRARME")]
+          )
         ])
-      ])
-    ])
+      ]
+    )
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "formulario-imputs__box" }, [
+      _c("input", {
+        staticClass: "formulario-imputs__checkbox",
+        attrs: { type: "checkbox", required: "", name: "term", id: "term" }
+      }),
+      _vm._v(" "),
+      _c("label", { staticClass: "terms", attrs: { for: "term" } }, [
+        _vm._v("Acepto la política de protección de datos personales")
+      ])
+    ])
+  }
+]
 render._withStripped = true
 
 
@@ -93960,7 +94456,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var vuetify_lib_components_VApp__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vuetify/lib/components/VApp */ "./node_modules/vuetify/lib/components/VApp/index.js");
 /* harmony import */ var vuetify_lib_components_VBtn__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! vuetify/lib/components/VBtn */ "./node_modules/vuetify/lib/components/VBtn/index.js");
-/* harmony import */ var vuetify_lib_components_VForm__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! vuetify/lib/components/VForm */ "./node_modules/vuetify/lib/components/VForm/index.js");
+/* harmony import */ var vuetify_lib_components_VIcon__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! vuetify/lib/components/VIcon */ "./node_modules/vuetify/lib/components/VIcon/index.js");
 /* harmony import */ var vuetify_lib_components_VTextField__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! vuetify/lib/components/VTextField */ "./node_modules/vuetify/lib/components/VTextField/index.js");
 
 
@@ -93986,7 +94482,7 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 
 
-_node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3___default()(component, {VApp: vuetify_lib_components_VApp__WEBPACK_IMPORTED_MODULE_4__["VApp"],VBtn: vuetify_lib_components_VBtn__WEBPACK_IMPORTED_MODULE_5__["VBtn"],VForm: vuetify_lib_components_VForm__WEBPACK_IMPORTED_MODULE_6__["VForm"],VTextField: vuetify_lib_components_VTextField__WEBPACK_IMPORTED_MODULE_7__["VTextField"]})
+_node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3___default()(component, {VApp: vuetify_lib_components_VApp__WEBPACK_IMPORTED_MODULE_4__["VApp"],VBtn: vuetify_lib_components_VBtn__WEBPACK_IMPORTED_MODULE_5__["VBtn"],VIcon: vuetify_lib_components_VIcon__WEBPACK_IMPORTED_MODULE_6__["VIcon"],VTextField: vuetify_lib_components_VTextField__WEBPACK_IMPORTED_MODULE_7__["VTextField"]})
 
 
 /* hot reload */
@@ -94040,9 +94536,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _RegisterComponent_vue_vue_type_template_id_51f045bf___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./RegisterComponent.vue?vue&type=template&id=51f045bf& */ "./resources/js/components/RegisterComponent.vue?vue&type=template&id=51f045bf&");
 /* harmony import */ var _RegisterComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./RegisterComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/RegisterComponent.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-/* harmony import */ var _node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../node_modules/vuetify-loader/lib/runtime/installComponents.js */ "./node_modules/vuetify-loader/lib/runtime/installComponents.js");
-/* harmony import */ var _node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var vuetify_lib_components_VApp__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vuetify/lib/components/VApp */ "./node_modules/vuetify/lib/components/VApp/index.js");
 
 
 
@@ -94060,12 +94553,6 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   null
   
 )
-
-/* vuetify-loader */
-
-
-_node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3___default()(component, {VApp: vuetify_lib_components_VApp__WEBPACK_IMPORTED_MODULE_4__["VApp"]})
-
 
 /* hot reload */
 if (false) { var api; }

@@ -74,20 +74,7 @@
           <section class="logo">
             <img class="logo-img" src="{{url('/img/icono-blanco.png')}}" alt="biowwell">
           </section>
-          <section class="formulario">
-            <h3 class="titulo">
-              Regístrate y recibe los mejores concejos médicos para aumentar tu bienestar y relajación
-            </h3>
-            <div class="formulario-imputs">
-              <label class="formulario-imputs__label" for="email">Tu correo electrónico</label>
-              <input type="text" class="formulario-imputs__input" placeholder="Correo electrónico">
-              <div class="formulario-imputs__box">
-                <input type="checkbox" class="formulario-imputs__checkbox" name="term" id="term">
-                <label class="terms" for="term">Acepto la política de protección de datos personales</label>
-              </div>
-              <button class="formulario-imputs__button">REGISTRARME</button>
-            </div>
-          </section>
+          <register-component></register-component>
         </div>
       </div>
     </div>
@@ -128,7 +115,7 @@
             <div class="shopers row">
                 <div class="shoper-item col-md-3">
                     <img class="mb-2 mb-3 shoper-item__img" style="max-width: 100%" src="{{url('/img/logo-linio.png')}}" alt="linio">
-                    <button class=" owned-btn__secondary" type="button" data-toggle="modal" data-target="#exampleModal">
+                    <button class=" owned-btn__secondary" type="button" >
                         Comprar
                     </button>
                 </div>
@@ -140,13 +127,13 @@
                 </div>
                 <div class="shoper-item col-md-3">
                     <img class="shoper-item__img mb-3" style="max-width: 100%" src="{{url('/img/sol-verde.png')}}" alt="sol-verde">
-                    <button class=" owned-btn__secondary" type="button" data-toggle="modal" data-target="#exampleModal">
+                    <button class=" owned-btn__secondary" type="button" >
                         Comprar
                     </button>
                 </div>
                 <div class="shoper-item col-md-3">
                     <img class="shoper-item__img" style="max-width: 100%" src="{{url('/img/logo-falabella.png')}}" alt="falabella">
-                    <button class=" owned-btn__secondary" type="button" data-toggle="modal" data-target="#exampleModal">
+                    <button class=" owned-btn__secondary" type="button" >
                         Comprar
                     </button>
                 </div>
@@ -284,8 +271,12 @@
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-      <div class="modal-header">
-        Para efectuar el pago sera dirigido a la plataforma <img width="60" src="{{asset('img/payu2x.png')}}" alt="payu">
+      <div class="">
+        <div class="text-center">
+
+          <img style="max-width:100%" width="320" src="{{url('/img/individual.png')}}" alt="producto">
+        </div>
+        
       </div>
       <pay-form-component></pay-form-component>
     </div>
