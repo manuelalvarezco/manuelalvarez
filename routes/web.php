@@ -19,10 +19,8 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-Route::view('/gracias', 'gracias');
+Route::post('/pay','PayController@pay');
+Route::post('responsePayU','PayController@responsePayU');
 
-Route::resource('/customers','CustomerController');
-
-Route::post('/pay', 'PayController@pay');
-Route::post('/responsePayU', 'PayController@responsePayU')->name('responsePayU');
+Route::resouce('/customers','CustomerController');
+Route::view('/gracias','gracias')
