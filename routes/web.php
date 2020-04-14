@@ -22,5 +22,5 @@ Auth::routes();
 Route::post('/pay','PayController@pay');
 Route::post('responsePayU','PayController@responsePayU');
 
-Route::resouce('/customers','CustomerController');
+Route::resource('/customers','CustomerController');
 Route::view('/gracias','gracias');
