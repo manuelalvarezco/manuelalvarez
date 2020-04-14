@@ -22,4 +22,4 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/pay', 'PayController@pay')->name('pay');
-Route::post('/responsePayU', 'PayController@responsePayU')->name('responsePayU');
+Route::post('responsePayU', 'PayController@responsePayU');

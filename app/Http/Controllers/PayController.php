@@ -29,6 +29,7 @@ class PayController extends Controller
 
     public function responsePayU()
     {
+        \Log::info('entra o no entra?');
         // Indica el estado de la transacción en el sistema.
         $state_pol            = $_POST['state_pol'];
         // El código de respuesta de PayU.
