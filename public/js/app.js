@@ -40762,7 +40762,8 @@ var render = function() {
           {
             attrs: {
               method: "post",
-              action: "https://gateway.payulatam.com/ppp-web-gateway"
+              action:
+                "hhttps://sandbox.checkout.payulatam.com/ppp-web-gateway-payu/"
             }
           },
           [
