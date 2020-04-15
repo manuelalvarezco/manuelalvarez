@@ -21,7 +21,11 @@ class PayController extends Controller
         $merchantId    = $parameters->merchantId;
         $accountId     = $parameters->accountId;
         $currency      = "COP";
-        $amount        = $request->amount;
+        if($request->amount){
+            $amount        = $request->amount;
+        }else{
+            $amount = '20000';
+        }
 
 
         $signature = md5($apiKey."~".$merchantId."~".$referenceCode."~".$amount."~".$currency);
