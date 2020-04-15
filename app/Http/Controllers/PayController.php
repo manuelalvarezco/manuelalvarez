@@ -24,7 +24,7 @@ class PayController extends Controller
         if($request->amount){
             $amount        = $request->amount;
         }else{
-            $amount = '1000';
+            $amount = '12000';
         }
 
 

@@ -2235,8 +2235,8 @@ __webpack_require__.r(__webpack_exports__);
     return {
       count: 1,
       payu: {
-        price: 1000,
-        amount: 1000,
+        price: 12000,
+        amount: 12000,
         tax: 0,
         description: 'Crema Corporal Biowell',
         taxReturnBase: 0,
