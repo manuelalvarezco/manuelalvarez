@@ -36,7 +36,7 @@ export default {
       }
       this.email = ''; 
 
-      axios.post('/mk',params)
+      axios.post('/biowellness/public/customers',params)
         .then( resp=>{
           this.message = 'Gracias por registrarte, pronto estaremos en contacto';
           this.saved = true;
