@@ -105,7 +105,7 @@
         tax:0,
         description:'Crema Corporal Biowell',
         taxReturnBase:0,
-        test:1,
+        test:0,
         responseUrl:'https://ecommerce.biowell.co/biowellness/public/gracias',
         shippingCity:'Bogota',
         shippingCountry:'CO',
