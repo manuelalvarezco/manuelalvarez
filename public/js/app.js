@@ -2350,7 +2350,7 @@ __webpack_require__.r(__webpack_exports__);
         email: this.email
       };
       this.email = '';
-      axios.post('/customers', params).then(function (resp) {
+      axios.post('/biowellness/public/customers', params).then(function (resp) {
         _this.message = 'Gracias por registrarte, pronto estaremos en contacto';
         _this.saved = true;
       })["catch"](function (error) {
