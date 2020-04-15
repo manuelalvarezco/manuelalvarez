@@ -171,6 +171,7 @@
         axios.post('/biowellness/public/pay',{'amount':amount})
           .then(resp=>{
             this.parameters = resp.data;
+            
           })
       },
 
