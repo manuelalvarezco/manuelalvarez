@@ -30,7 +30,7 @@
     </div>
 
 
-    <form method="post" action="https://sandbox.checkout.payulatam.com/ppp-web-gateway-payu/">
+    <form method="post" action="https://gateway.payulatam.com/ppp-web-gateway">
                         <!-- Url Pruebas: https://sandbox.checkout.payulatam.com/ppp-web-gateway-payu/ -->
                         <!-- Url Production: https://gateway.payulatam.com/ppp-web-gateway -->
       <input name="merchantId"  type="hidden"  v-model="parameters.merchantId" >
@@ -170,7 +170,7 @@
       getParameters(amount){
 
         
-        axios.post('/biowellness/public/pay',{'amount':amount})
+        axios.post('/pay',{'amount':amount})
           .then(resp=>{
             this.parameters = resp.data;
 

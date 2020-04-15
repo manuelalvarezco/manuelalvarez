@@ -2294,7 +2294,7 @@ __webpack_require__.r(__webpack_exports__);
     getParameters: function getParameters(amount) {
       var _this2 = this;
 
-      axios.post('/biowellness/public/pay', {
+      axios.post('/pay', {
         'amount': amount
       }).then(function (resp) {
         _this2.parameters = resp.data;
@@ -2350,7 +2350,7 @@ __webpack_require__.r(__webpack_exports__);
         email: this.email
       };
       this.email = '';
-      axios.post('/biowellness/public/customers', params).then(function (resp) {
+      axios.post('/customers', params).then(function (resp) {
         _this.message = 'Gracias por registrarte, pronto estaremos en contacto';
         _this.saved = true;
       })["catch"](function (error) {
@@ -40762,8 +40762,7 @@ var render = function() {
           {
             attrs: {
               method: "post",
-              action:
-                "https://sandbox.checkout.payulatam.com/ppp-web-gateway-payu/"
+              action: "https://gateway.payulatam.com/ppp-web-gateway"
             }
           },
           [
