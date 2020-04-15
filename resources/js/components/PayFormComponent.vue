@@ -30,7 +30,7 @@
     </div>
 
 
-    <form method="post" action="hhttps://sandbox.checkout.payulatam.com/ppp-web-gateway-payu/">
+    <form method="post" action="https://sandbox.checkout.payulatam.com/ppp-web-gateway-payu/">
                         <!-- Url Pruebas: https://sandbox.checkout.payulatam.com/ppp-web-gateway-payu/ -->
                         <!-- Url Production: https://gateway.payulatam.com/ppp-web-gateway -->
       <input name="merchantId"  type="hidden"  v-model="parameters.merchantId" >
