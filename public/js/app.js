@@ -2225,6 +2225,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2237,7 +2242,7 @@ __webpack_require__.r(__webpack_exports__);
         taxReturnBase: 0,
         test: 0,
         responseUrl: 'https://ecommerce.biowell.co/biowellness/public/gracias',
-        shippingCity: 'Bogota',
+        shippingCity: '',
         shippingCountry: 'CO',
         confirmationUrl: 'https://ecommerce.biowell.co/biowellness/public/responsePayU'
       },
@@ -2249,6 +2254,7 @@ __webpack_require__.r(__webpack_exports__);
       }, function (v) {
         return v && v.length <= 10 || 'El teléfono es inválido';
       }],
+      city: '',
       delivery: '',
       deliveryRules: [function (v) {
         return !!v || 'La dirección es requerida';
@@ -41002,27 +41008,6 @@ var render = function() {
                 {
                   name: "model",
                   rawName: "v-model",
-                  value: _vm.payu.shippingCity,
-                  expression: "payu.shippingCity"
-                }
-              ],
-              attrs: { name: "shippingCity", type: "hidden" },
-              domProps: { value: _vm.payu.shippingCity },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(_vm.payu, "shippingCity", $event.target.value)
-                }
-              }
-            }),
-            _vm._v(" "),
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
                   value: _vm.payu.shippingCountry,
                   expression: "payu.shippingCountry"
                 }
@@ -41105,6 +41090,22 @@ var render = function() {
                   _vm.phone = $$v
                 },
                 expression: "phone"
+              }
+            }),
+            _vm._v(" "),
+            _c("v-text-field", {
+              attrs: {
+                name: "shippingCity",
+                rules: _vm.deliveryRules,
+                label: "Ciudad de envío",
+                required: ""
+              },
+              model: {
+                value: _vm.payu.shippingCity,
+                callback: function($$v) {
+                  _vm.$set(_vm.payu, "shippingCity", $$v)
+                },
+                expression: "payu.shippingCity"
               }
             }),
             _vm._v(" "),

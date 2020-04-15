@@ -44,7 +44,6 @@
       <input name="signature"     type="hidden"  v-model="parameters.signature">
       <input name="test"          type="hidden"  v-model="payu.test">
       <input name="responseUrl"   type="hidden"  v-model="payu.responseUrl">
-      <input name="shippingCity"    type="hidden"  v-model="payu.shippingCity">
       <input name="shippingCountry" type="hidden"  v-model="payu.shippingCountry">
       <input name="confirmationUrl" type="hidden"  v-model="payu.confirmationUrl">
       
@@ -70,7 +69,13 @@
       label="Teléfono"
       required
     ></v-text-field>
-
+    <v-text-field
+      name="shippingCity"
+      v-model="payu.shippingCity"
+      :rules="deliveryRules"
+      label="Ciudad de envío"
+      required
+    ></v-text-field>
     <v-text-field
     name="shippingAddress"
       v-model="delivery"
@@ -107,7 +112,7 @@
         taxReturnBase:0,
         test:0,
         responseUrl:'https://ecommerce.biowell.co/biowellness/public/gracias',
-        shippingCity:'Bogota',
+        shippingCity:'',
         shippingCountry:'CO',
         confirmationUrl:'https://ecommerce.biowell.co/biowellness/public/responsePayU'
       },
@@ -118,6 +123,7 @@
         v => !!v || 'El teléfono es requerido',
         v => (v && v.length <= 10) || 'El teléfono es inválido',
       ],
+      city:'',
       delivery:'',
       deliveryRules: [
         v => !!v || 'La dirección es requerida'
