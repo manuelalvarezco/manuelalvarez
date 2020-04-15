@@ -2294,16 +2294,10 @@ __webpack_require__.r(__webpack_exports__);
     getParameters: function getParameters(amount) {
       var _this2 = this;
 
-      axios.post('/pay', {
+      axios.post('/biowellness/public/pay', {
         'amount': amount
       }).then(function (resp) {
         _this2.parameters = resp.data;
-      })["catch"](function (error) {
-        axios.post('/biowellness/public/pay', {
-          'amount': amount
-        }).then(function (resp) {
-          _this2.parameters = resp.data;
-        });
       });
     }
   }
