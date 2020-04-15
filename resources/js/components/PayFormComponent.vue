@@ -11,13 +11,13 @@
       <div class="d-flex justify-content-between align-items-center">
         <div class="contador">
           <div style="width:100%" class="d-flex justify-content-around">
-            <v-btn  class="item-contador" v-on:click="res" icon color="pink">
-              <v-icon>remove</v-icon>
-            </v-btn>
+            <button class="btn item-contador" v-on:click="res">
+              -
+            </button>
             <span>{{count}}</span>
-            <v-btn  class="item-contador" v-on:click="add" icon color="indigo">
-              <v-icon>add_shopping_cart</v-icon>
-            </v-btn>
+            <button class="btn item-contador" v-on:click="add">
+              +
+            </button>
           </div>
           
         </div>
@@ -30,7 +30,7 @@
     </div>
 
 
-    <form method="post" action="https://gateway.payulatam.com/ppp-web-gateway">
+    <form method="post" action="https://sandbox.checkout.payulatam.com/ppp-web-gateway-payu/">
                         <!-- Url Pruebas: https://sandbox.checkout.payulatam.com/ppp-web-gateway-payu/ -->
                         <!-- Url Production: https://gateway.payulatam.com/ppp-web-gateway -->
       <input name="merchantId"  type="hidden"  v-model="parameters.merchantId" >
@@ -136,7 +136,7 @@
     mounted() {
       const amount = this.payu.amount;
 
-      axios.post('/pay',amount)
+      axios.post('pay',amount)
           .then(resp=>{
             this.parameters = resp.data;
           })

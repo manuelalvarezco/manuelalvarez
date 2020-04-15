@@ -2270,7 +2270,7 @@ __webpack_require__.r(__webpack_exports__);
     var _this = this;
 
     var amount = this.payu.amount;
-    axios.post('/pay', amount).then(function (resp) {
+    axios.post('pay', amount).then(function (resp) {
       _this.parameters = resp.data;
     });
   },
@@ -40715,30 +40715,25 @@ var render = function() {
                   },
                   [
                     _c(
-                      "v-btn",
+                      "button",
                       {
-                        staticClass: "item-contador",
-                        attrs: { icon: "", color: "pink" },
+                        staticClass: "btn item-contador",
                         on: { click: _vm.res }
                       },
-                      [_c("v-icon", [_vm._v("remove")])],
-                      1
+                      [_vm._v("\n              -\n            ")]
                     ),
                     _vm._v(" "),
                     _c("span", [_vm._v(_vm._s(_vm.count))]),
                     _vm._v(" "),
                     _c(
-                      "v-btn",
+                      "button",
                       {
-                        staticClass: "item-contador",
-                        attrs: { icon: "", color: "indigo" },
+                        staticClass: "btn item-contador",
                         on: { click: _vm.add }
                       },
-                      [_c("v-icon", [_vm._v("add_shopping_cart")])],
-                      1
+                      [_vm._v("\n              +\n            ")]
                     )
-                  ],
-                  1
+                  ]
                 )
               ]),
               _vm._v(" "),
@@ -40767,7 +40762,8 @@ var render = function() {
           {
             attrs: {
               method: "post",
-              action: "https://gateway.payulatam.com/ppp-web-gateway"
+              action:
+                "https://sandbox.checkout.payulatam.com/ppp-web-gateway-payu/"
             }
           },
           [
@@ -94456,8 +94452,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var vuetify_lib_components_VApp__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vuetify/lib/components/VApp */ "./node_modules/vuetify/lib/components/VApp/index.js");
 /* harmony import */ var vuetify_lib_components_VBtn__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! vuetify/lib/components/VBtn */ "./node_modules/vuetify/lib/components/VBtn/index.js");
-/* harmony import */ var vuetify_lib_components_VIcon__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! vuetify/lib/components/VIcon */ "./node_modules/vuetify/lib/components/VIcon/index.js");
-/* harmony import */ var vuetify_lib_components_VTextField__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! vuetify/lib/components/VTextField */ "./node_modules/vuetify/lib/components/VTextField/index.js");
+/* harmony import */ var vuetify_lib_components_VTextField__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! vuetify/lib/components/VTextField */ "./node_modules/vuetify/lib/components/VTextField/index.js");
 
 
 
@@ -94481,8 +94476,7 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 
 
-
-_node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3___default()(component, {VApp: vuetify_lib_components_VApp__WEBPACK_IMPORTED_MODULE_4__["VApp"],VBtn: vuetify_lib_components_VBtn__WEBPACK_IMPORTED_MODULE_5__["VBtn"],VIcon: vuetify_lib_components_VIcon__WEBPACK_IMPORTED_MODULE_6__["VIcon"],VTextField: vuetify_lib_components_VTextField__WEBPACK_IMPORTED_MODULE_7__["VTextField"]})
+_node_modules_vuetify_loader_lib_runtime_installComponents_js__WEBPACK_IMPORTED_MODULE_3___default()(component, {VApp: vuetify_lib_components_VApp__WEBPACK_IMPORTED_MODULE_4__["VApp"],VBtn: vuetify_lib_components_VBtn__WEBPACK_IMPORTED_MODULE_5__["VBtn"],VTextField: vuetify_lib_components_VTextField__WEBPACK_IMPORTED_MODULE_6__["VTextField"]})
 
 
 /* hot reload */
