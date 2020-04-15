@@ -2298,6 +2298,12 @@ __webpack_require__.r(__webpack_exports__);
         'amount': amount
       }).then(function (resp) {
         _this2.parameters = resp.data;
+      })["catch"](function (error) {
+        axios.post('/biowellness/public/pay', {
+          'amount': amount
+        }).then(function (resp) {
+          _this2.parameters = resp.data;
+        });
       });
     }
   }
@@ -40762,8 +40768,7 @@ var render = function() {
           {
             attrs: {
               method: "post",
-              action:
-                "https://sandbox.checkout.payulatam.com/ppp-web-gateway-payu/"
+              action: "https://gateway.payulatam.com/ppp-web-gateway"
             }
           },
           [
