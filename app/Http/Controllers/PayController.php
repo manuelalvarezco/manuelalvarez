@@ -97,7 +97,7 @@ class PayController extends Controller
     	$save_resp->email_buyer          = $email_buyer;
     	$save_resp->description          = $description;
     	$save_resp->shipping_address     = $shipping_address;
-    	$save_resp->$shipping_city        = $shipping_city;
+    	$save_resp->shipping_city        = $shipping_city;
     	$save_resp->phone                = $phone;
     	$save_resp->payment_method_id    = $payment_method_id;
     	$save_resp->response_message_pol = $response_message_pol;
