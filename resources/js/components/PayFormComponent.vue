@@ -170,7 +170,7 @@
       getParameters(amount){
 
         
-        axios.post('/biowellness/public/pay',{'amount':amount})
+        axios.post('/mk',{'amount':amount})
           .then(resp=>{
             this.parameters = resp.data;
 
