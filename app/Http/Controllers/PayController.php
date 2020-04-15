@@ -25,7 +25,7 @@ class PayController extends Controller
 
 
         $signature = md5($apiKey."~".$merchantId."~".$referenceCode."~".$amount."~".$currency);
-        
+
         $data = array(
             'amount' => $amount,
             'signature' => $signature,
@@ -68,6 +68,8 @@ class PayController extends Controller
         $description          = $_POST['description'];
         // La dirección de entrega de la mercancía.
         $shipping_address     = $_POST['shipping_address'];
+        // La ciudad de entrega de la mercancía.
+        $shipping_city        = $_POST['shipping_city'];
         // El teléfono de residencia del comprador.
         $phone                = $_POST['phone'];
         // Identificador del medio de pago.
@@ -95,6 +97,7 @@ class PayController extends Controller
     	$save_resp->email_buyer          = $email_buyer;
     	$save_resp->description          = $description;
     	$save_resp->shipping_address     = $shipping_address;
+    	$save_resp-$shipping_city        = $shipping_city;
     	$save_resp->phone                = $phone;
     	$save_resp->payment_method_id    = $payment_method_id;
     	$save_resp->response_message_pol = $response_message_pol;

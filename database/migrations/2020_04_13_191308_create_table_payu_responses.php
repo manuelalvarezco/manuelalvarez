@@ -28,6 +28,7 @@ class CreateTablePayuResponses extends Migration
             $table->string('email_buyer');
             $table->string('description');
             $table->string('shipping_address');
+            $table->string('shipping_city');
             $table->string('phone');
             $table->string('payment_method_id');
             $table->string('response_message_pol');
