@@ -94634,8 +94634,8 @@ var opts = {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/luismanuelalvarez/Documents/Laravel/webcheckout/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/luismanuelalvarez/Documents/Laravel/webcheckout/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /Users/luismanuelalvarez/Documents/viowellness/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/luismanuelalvarez/Documents/viowellness/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

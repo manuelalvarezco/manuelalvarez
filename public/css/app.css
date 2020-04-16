@@ -4,6 +4,39 @@
   background-color: #25A5A4;
 }
 
+.footer-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  margin-bottom: 3rem !important;
+}
+
+@media screen and (max-width: 767px) {
+  .footer-items {
+    flex-direction: column;
+  }
+}
+
+.footer-items__marca {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 767px) {
+  .footer-items__marca {
+    flex-direction: column;
+  }
+}
+
+.footer-items__iconos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .formulario-imputs__input {
   display: block;
   width: 100%;

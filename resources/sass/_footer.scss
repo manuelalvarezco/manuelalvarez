@@ -2,6 +2,33 @@
     background-color: $primary-color;
 }
 
+.footer-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    margin-bottom: 3rem !important;
+    @media screen and(max-width: 767px) {
+        flex-direction: column;
+    }
+}
+
+.footer-items__marca {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media screen and(max-width: 767px) {
+        flex-direction: column;
+    }
+}
+
+.footer-items__iconos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .formulario-imputs__input {
     display: block;
     width: 100%;
