@@ -176,6 +176,17 @@
   }
 }
 
+.p-mobile {
+  display: flex;
+  margin-top: 0.5rem !important;
+}
+
+@media screen and (max-width: 767px) {
+  .p-mobile {
+    justify-content: center;
+  }
+}
+
 .ingredients {
   display: flex;
   justify-content: center;

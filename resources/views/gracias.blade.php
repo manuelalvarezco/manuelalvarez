@@ -31,7 +31,7 @@
       <div class="d-flex flex-column">
         <span>{{ $processingDate }}</span>
         <h2 class="text-dark titulo">Hola {{ $merchant_name }}!</h2>
-        <h5 class="mt-2 text-dark subtitulo">A continuación está el resumen de tu compra:
+        <h5 class="mt-2 text-dark subtitulo">A continuación está el resumen de tu compra:</h5>
           <div class="row">
             <div class="col-md-6">
               <small class="text-dark titulo">Producto</small>
@@ -52,6 +52,12 @@
           </div>
           <div class="row">
             <div class="col-md-6">
+              <small class="text-dark titulo">Dirección de envío</small>
+            </div>
+            <div class="col-md-6">{{ $merchant_address }}</div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
               <small class="text-dark titulo">Código de referencia</small>
             </div>
             <div class="col-md-6">{{ $referenceCode }}</div>
@@ -62,7 +68,10 @@
             </div>
             <div class="col-md-6">{{ $lapPaymentMethod }}</div>
           </div>
-        </h5>
+          <div class="p-mobile">
+            <small>* Algunos datos se ocultan por seguridad</small>
+          </div>
+        
       </div>
     </div>
   </div>
