@@ -117,9 +117,9 @@
             <div class="shopers row">
                 <div class="shoper-item col-md-3">
                     <img class="mb-2 mb-3 shoper-item__img" style="max-width: 100%" src="{{url('/img/logo-linio.png')}}" alt="linio">
-                    <button class=" owned-btn__secondary" type="button" >
+                    <a style="text-decoration: none" target="_blank" href="https://www.linio.com.co/p/biowell-crema-antioxidante-100g-lgaqvb?qid=ef6ff9e334a09c6a141aa18afbe8951f&oid=BI156HB1D7JWSLCO&position=1&sku=BI156HB1D7JWSLCO" class=" owned-btn__secondary" type="button" >
                         Comprar
-                    </button>
+                    </a>
                 </div>
                 <div class="shoper-item col-md-3">
                     <img class="shoper-item__img" style="max-width: 100%" src="{{url('/img/logo-biowellness.png')}}" alt="biowellness">
@@ -129,15 +129,15 @@
                 </div>
                 <div class="shoper-item col-md-3">
                     <img class="shoper-item__img mb-3" style="max-width: 100%" src="{{url('/img/sol-verde.png')}}" alt="sol-verde">
-                    <button class=" owned-btn__secondary" type="button" >
+                    <a style="text-decoration: none" target="_blank" href="https://solverde.com.co/producto/crema-humectante-y-antioxidante-biowell/" class=" owned-btn__secondary" type="button" >
                         Comprar
-                    </button>
+                    </a>
                 </div>
                 <div class="shoper-item col-md-3">
                     <img class="shoper-item__img" style="max-width: 100%" src="{{url('/img/logo-falabella.png')}}" alt="falabella">
-                    <button class=" owned-btn__secondary" type="button" >
+                    <a style="text-decoration: none" target="_blank" href="https://www.falabella.com.co/falabella-co/product/4268745/Crema-antioxidante-Biowell/4268745" class=" owned-btn__secondary" type="button" >
                         Comprar
-                    </button>
+                    </a>
                 </div>
             </div>
           </div>
