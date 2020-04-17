@@ -22,14 +22,14 @@
 </div>
 
 <div class="container mt-2">
-  <div class="row d-flex align-items-center justify-content-center">
+  <div class="row datos-usuario">
     <div class="col-md-6">
       <img style="max-width:100%" width="620" src="{{url('/img/individual.png')}}" alt="producto">
     </div>
     <div class="col-md-6">
       
       <div class="d-flex flex-column">
-        <span>2015</span>
+        <span>{{ $processingDate }}</span>
         <h2 class="text-dark titulo">Hola {{ $merchant_name }}!</h2>
         <h5 class="mt-2 text-dark subtitulo">A continuación está el resumen de tu compra:
           <div class="row">

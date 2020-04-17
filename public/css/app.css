@@ -164,6 +164,18 @@
   color: white;
 }
 
+.datos-usuario {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 767px) {
+  .datos-usuario {
+    text-align: center;
+  }
+}
+
 .ingredients {
   display: flex;
   justify-content: center;

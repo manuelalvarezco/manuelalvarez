@@ -120,6 +120,7 @@ class PayController extends Controller
         $transactionState = $request->transactionState;
         $lapPaymentMethod = $request->lapPaymentMethod;
         $transactionId = $request->transactionId;
+        $processingDate = $request->processingDate;
 
     
 
@@ -143,7 +144,7 @@ class PayController extends Controller
             $transactionState=$request->mensaje;
         }
 
-        return view('gracias', compact('merchant_id','merchant_name','referenceCode','TX_VALUE','transactionState','lapPaymentMethod','transactionId'));
+        return view('gracias', compact('merchant_id','merchant_name','referenceCode','TX_VALUE','transactionState','lapPaymentMethod','transactionId','processingDate'));
         
     }
 }

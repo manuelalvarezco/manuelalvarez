@@ -140,3 +140,13 @@
     text-decoration: none;
     color: white;
 }
+
+//gracias
+.datos-usuario {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media screen and(max-width: 767px) {
+        text-align: center;
+    }
+}
