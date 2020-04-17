@@ -5,42 +5,67 @@
 
 @section('content')
 
-<div class="container" style="padding-bottom: 0;">
-  <div class="main" style="background-image: url('./img/main.png')">
-  <div class="row">
-    <div class="col-md-6 d-flex flex-column align-items-center">
-      <img width="250" src="{{url('/img/logo-main.png')}}" alt="logo">
-      <div class="d-flex flex-column text-center">
-        <span class="fs-25 text-bold primary-color titulo" >GRACIAS</span>
-        <div class="divider"></div>
-        <small class="fs-16 primary-color">Conoce más de nuestros productos en</small>
-        <div class="d-flex justify-content-center mt-4">
-          <a href="#">
-          <img width="70" src="{{url('/img/instagram.png')}}" alt="instagram">
-          </a>
-          <a href="#">
-          <img width="70" src="{{url('/img/facebook.png')}}" alt="facebook">
-          </a>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-6 d-flex justify-content-center">
-      <img style="max-width:100%" width="620" src="{{url('/img/producto.png')}}" alt="producto">
-    </div>
-    
-  </div>
-  <div style="min-height:100px" class="row mt-4 d-flex justify-content-center">
-    <div class="about-info" style="background-image: url('./img/bg-button.png')">
-    <a class="btn" style="text-decoration:none;color:white" href="{{url('/')}}">
-        <span class="fs-25">
-        Regresar al inicio
-        </span>
+<div style="min-height:500px;background-color:#25A5A4" class="d-flex justify-content-center align-items-center text-center" style="padding-bottom: 0;">
+  
+  <div class="container d-flex flex-column">
+    <h1 style="font-size: 8em;font-weight: 500" class="titulo text-white display-1">Gracias!</h1>
+    <div class="d-flex justify-content-center align-items-center text-center">
+      <a style="text-decoration: none" class="titulo text-white" href="https://ecommerce.biowell.co">
+        <img src="{{url('/img/icono-blanco.png')}}" width="55" alt="icono">
+        Biowell.co
       </a>
     </div>
-    </div>
+  </div>
+
+
     
+</div>
+
+<div class="container mt-2">
+  <div class="row d-flex align-items-center justify-content-center">
+    <div class="col-md-6">
+      <img style="max-width:100%" width="620" src="{{url('/img/individual.png')}}" alt="producto">
     </div>
-    
+    <div class="col-md-6">
+      
+      <div class="d-flex flex-column">
+        <span>2015</span>
+        <h2 class="text-dark titulo">Hola {{ $merchant_name }}!</h2>
+        <h5 class="mt-2 text-dark subtitulo">A continuación está el resumen de tu compra:
+          <div class="row">
+            <div class="col-md-6">
+              <small class="text-dark titulo">Producto</small>
+            </div>
+            <div class="col-md-6">Crema Corporal Biowell</div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <small class="text-dark titulo">Estado de la transacción</small>
+            </div>
+            <div class="col-md-6">{{ $transactionState }}</div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <small class="text-dark titulo">Valor Pagado</small>
+            </div>
+            <div class="col-md-6">COP ${{ number_format($TX_VALUE) }}</div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <small class="text-dark titulo">Código de referencia</small>
+            </div>
+            <div class="col-md-6">{{ $referenceCode }}</div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <small class="text-dark titulo">Método de pago</small>
+            </div>
+            <div class="col-md-6">{{ $lapPaymentMethod }}</div>
+          </div>
+        </h5>
+      </div>
+    </div>
+  </div>
 </div>
 
 @endsection

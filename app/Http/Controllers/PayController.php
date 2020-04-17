@@ -111,4 +111,39 @@ class PayController extends Controller
     	$save_resp->save();
     }
 
+    public function gracias(Request $request){
+
+        $merchant_id = $request->merchantId;
+        $merchant_name = $request->merchant_name;
+        $referenceCode = $request->referenceCode;
+        $TX_VALUE = $request->TX_VALUE;
+        $transactionState = $request->transactionState;
+        $lapPaymentMethod = $request->lapPaymentMethod;
+        $transactionId = $request->transactionId;
+
+    
+
+        if ($transactionState == 4 ) {
+            $transactionState = "Transacción aprobada";
+        }
+
+        else if ($transactionState == 6 ) {
+            $transactionState = "Transacción rechazada";
+        }
+
+        else if ($transactionState == 104 ) {
+            $transactionState = "Error";
+        }
+
+        else if ($transactionState == 7 ) {
+            $transactionState = "Transacción pendiente";
+        }
+
+        else {
+            $transactionState=$request->mensaje;
+        }
+
+        return view('gracias', compact('merchant_id','merchant_name','referenceCode','TX_VALUE','transactionState','lapPaymentMethod','transactionId'));
+        
+    }
 }
