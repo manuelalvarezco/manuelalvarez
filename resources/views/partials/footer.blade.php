@@ -21,15 +21,17 @@
       </div>
   
       <div class="footer-items__iconos">
-        
-        <h1 class="mt-5 text-white titulo">Biowell.co</h1>
         <a href="https://www.instagram.com/biowell.co/">
-          <img class="mt-5" width="40" src="{{url('/img/icon-instagram.png')}}" alt="Instagram">
+          <img class="mt-5" width="30" src="{{url('/img/logo-instagram-blanco.png')}}" alt="Instagram">
         </a>
         
-        <a href="https://www.facebook.com/Biowell.co/">
-          <img class="mt-5" width="40" src="{{url('/img/icon-facebook.png')}}" alt="Facebook">
+        <a style="margin:0 10px" href="https://www.facebook.com/Biowell.co/">
+          <img class="mt-5" width="30" src="{{url('/img/logo-facebook-blanco.png')}}" alt="Facebook">
         </a>
+        <a style="text-decoration: none" href="https://ecommerce.biowell.co/">
+          <h3 style="margin:0 10px" class="mt-5 text-white titulo">Biowell.co</h3>
+        </a>
+        
         
       </div>
   
