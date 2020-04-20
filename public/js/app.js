@@ -40713,61 +40713,55 @@ var render = function() {
             ])
           ]),
           _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass: "d-flex justify-content-between align-items-center"
-            },
-            [
-              _c("div", { staticClass: "contador" }, [
-                _c(
-                  "div",
-                  {
-                    staticClass: "d-flex justify-content-around",
-                    staticStyle: { width: "100%" }
-                  },
-                  [
-                    _c(
-                      "button",
-                      {
-                        staticClass: "btn item-contador",
-                        on: { click: _vm.res }
-                      },
-                      [_vm._v("\n              -\n            ")]
-                    ),
-                    _vm._v(" "),
-                    _c("span", [_vm._v(_vm._s(_vm.count))]),
-                    _vm._v(" "),
-                    _c(
-                      "button",
-                      {
-                        staticClass: "btn item-contador",
-                        on: { click: _vm.add }
-                      },
-                      [_vm._v("\n              +\n            ")]
-                    )
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "amount" }, [
-                _c(
-                  "h3",
-                  {
-                    staticClass: "titulo",
-                    staticStyle: { color: "rgb(144, 141, 141)" }
-                  },
-                  [
-                    _vm._v(
-                      "\n            $" +
-                        _vm._s(_vm.formatPrice(_vm.payu.amount)) +
-                        "\n          "
-                    )
-                  ]
-                )
-              ])
-            ]
-          )
+          _c("div", { staticClass: "items-pago" }, [
+            _c("div", { staticClass: "contador" }, [
+              _c(
+                "div",
+                {
+                  staticClass: "d-flex justify-content-around",
+                  staticStyle: { width: "100%" }
+                },
+                [
+                  _c(
+                    "button",
+                    {
+                      staticClass: "btn item-contador",
+                      on: { click: _vm.res }
+                    },
+                    [_vm._v("\n              -\n            ")]
+                  ),
+                  _vm._v(" "),
+                  _c("span", [_vm._v(_vm._s(_vm.count))]),
+                  _vm._v(" "),
+                  _c(
+                    "button",
+                    {
+                      staticClass: "btn item-contador",
+                      on: { click: _vm.add }
+                    },
+                    [_vm._v("\n              +\n            ")]
+                  )
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "amount" }, [
+              _c(
+                "h3",
+                {
+                  staticClass: "titulo",
+                  staticStyle: { color: "rgb(144, 141, 141)" }
+                },
+                [
+                  _vm._v(
+                    "\n            $" +
+                      _vm._s(_vm.formatPrice(_vm.payu.amount)) +
+                      "\n          "
+                  )
+                ]
+              )
+            ])
+          ])
         ]),
         _vm._v(" "),
         _c(

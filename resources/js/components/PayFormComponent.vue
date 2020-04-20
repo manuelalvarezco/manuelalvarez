@@ -8,7 +8,7 @@
       <div class="col-md-12 text-center">
         <h2 class="titulo primary-color">{{ payu.description }}</h2>
       </div>
-      <div class="d-flex justify-content-between align-items-center">
+      <div class="items-pago">
         <div class="contador">
           <div style="width:100%" class="d-flex justify-content-around">
             <button class="btn item-contador" v-on:click="res">

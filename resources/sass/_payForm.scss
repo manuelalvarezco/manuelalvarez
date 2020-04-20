@@ -25,3 +25,19 @@
         max-width: 90%!important;
     }
 }
+
+.items-pago {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    @media screen and(max-width: 767px) {
+        flex-direction: column-reverse;
+    }
+}
+
+.amount {
+    @media screen and(max-width: 767px) {
+        margin-top: 2%;
+    }
+}

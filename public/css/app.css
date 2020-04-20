@@ -452,6 +452,25 @@
   }
 }
 
+.items-pago {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 767px) {
+  .items-pago {
+    flex-direction: column-reverse;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .amount {
+    margin-top: 2%;
+  }
+}
+
 .group-item {
   display: flex;
   align-items: center;
