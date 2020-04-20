@@ -5,8 +5,8 @@
 
 @section('content')
 
-<div style="min-height:500px;background-color:#25A5A4" class="d-flex justify-content-center align-items-center text-center" style="padding-bottom: 0;">
-  
+<div style="min-height:300px;background-color:#25A5A4" class="d-flex justify-content-center align-items-center text-center" style="padding-bottom: 0;">
+
   <div class="container d-flex flex-column">
     <h1 style="font-size: 8em;font-weight: 500" class="titulo text-white display-1">Gracias!</h1>
     <div class="d-flex justify-content-center align-items-center text-center">
@@ -18,7 +18,7 @@
   </div>
 
 
-    
+
 </div>
 
 <div class="container mt-2">
@@ -27,10 +27,10 @@
       <img style="max-width:100%" width="620" src="{{url('/img/individual.png')}}" alt="producto">
     </div>
     <div class="col-md-6">
-      
+
       <div class="d-flex flex-column">
         <span>{{ $processingDate }}</span>
-        <h2 class="text-dark titulo">Hola {{ $merchant_name }}!</h2>
+        <h3 class="text-dark titulo text-uppercase">Hola {{ $merchant_name }}!</h3>
         <h5 class="mt-2 text-dark subtitulo">A continuación está el resumen de tu compra:</h5>
           <div class="row">
             <div class="col-md-6">
@@ -71,7 +71,7 @@
           <div class="p-mobile">
             <small>* Algunos datos se ocultan por seguridad</small>
           </div>
-        
+
       </div>
     </div>
   </div>
