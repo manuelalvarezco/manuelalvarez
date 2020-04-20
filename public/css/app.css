@@ -452,6 +452,24 @@
   }
 }
 
+.group-item {
+  display: flex;
+  align-items: center;
+  margin-right: 0.5rem !important;
+}
+
+@media screen and (max-width: 767px) {
+  .group-item {
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .offset-owner {
+    margin-left: 8.3333333333%;
+  }
+}
+
 .owned-btn {
   font-weight: bold;
   min-width: 200px;

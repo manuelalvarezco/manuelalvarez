@@ -2297,6 +2297,13 @@ __webpack_require__.r(__webpack_exports__);
         this.getParameters(this.payu.amount);
       }
     },
+    cancelar: function cancelar() {
+      this.name = '';
+      this.email = '';
+      this.phone = '';
+      this.city = '';
+      this.delivery = '';
+    },
     getParameters: function getParameters(amount) {
       var _this2 = this;
 
@@ -2345,7 +2352,7 @@ __webpack_require__.r(__webpack_exports__);
     return {
       email: '',
       saved: false,
-      message: 'Regístrate y recibe los mejores concejos médicos para aumentar tu bienestar y relajación'
+      message: 'Regístrate y recibe los mejores consejos médicos para aumentar tu bienestar y relajación'
     };
   },
   methods: {
@@ -40768,7 +40775,8 @@ var render = function() {
           {
             attrs: {
               method: "post",
-              action: "https://gateway.payulatam.com/ppp-web-gateway"
+              action: "https://gateway.payulatam.com/ppp-web-gateway",
+              autocomplete: "off"
             }
           },
           [
@@ -41146,7 +41154,8 @@ var render = function() {
                   "button",
                   {
                     staticClass: "btn btn-outline-secondary",
-                    attrs: { type: "button", "data-dismiss": "modal" }
+                    attrs: { type: "button", "data-dismiss": "modal" },
+                    on: { click: _vm.cancelar }
                   },
                   [_vm._v("Cancelar")]
                 )

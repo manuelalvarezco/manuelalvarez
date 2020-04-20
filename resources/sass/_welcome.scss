@@ -1,0 +1,14 @@
+.group-item {
+    display: flex;
+    align-items: center;
+    margin-right: 0.5rem !important;
+    @media screen and(max-width: 767px) {
+        flex-direction: column;
+    }
+}
+
+.offset-owner {
+    @media screen and(min-width: 767px) {
+        margin-left: 8.3333333333%;
+    }
+}

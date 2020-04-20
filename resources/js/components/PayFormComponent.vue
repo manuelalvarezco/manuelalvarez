@@ -19,7 +19,7 @@
               +
             </button>
           </div>
-          
+
         </div>
         <div class="amount">
           <h3 style="color:rgb(144, 141, 141)" class="titulo">
@@ -30,7 +30,7 @@
     </div>
 
 
-    <form method="post" action="https://gateway.payulatam.com/ppp-web-gateway">
+    <form method="post" action="https://gateway.payulatam.com/ppp-web-gateway" autocomplete="off">
                         <!-- Url Pruebas: https://sandbox.checkout.payulatam.com/ppp-web-gateway-payu/ -->
                         <!-- Url Production: https://gateway.payulatam.com/ppp-web-gateway -->
       <input name="merchantId"  type="hidden"  v-model="parameters.merchantId" >
@@ -46,7 +46,7 @@
       <input name="responseUrl"   type="hidden"  v-model="payu.responseUrl">
       <input name="shippingCountry" type="hidden"  v-model="payu.shippingCountry">
       <input name="confirmationUrl" type="hidden"  v-model="payu.confirmationUrl">
-      
+
       <v-text-field
       name="buyerFullName"
       v-model="names"
@@ -92,11 +92,11 @@
       >
         Continuar
       </v-btn>
-      <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Cancelar</button>
+      <button v-on:click="cancelar" type="button" class="btn btn-outline-secondary" data-dismiss="modal">Cancelar</button>
     </div>
   </form>
 
- 
+
   </v-app>
   </div>
 </template>
@@ -149,7 +149,7 @@
     },
 
     methods: {
-      
+
       formatPrice(value) {
         let val = (value/1).toFixed(2).replace('.', ',')
         return val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")
@@ -159,31 +159,38 @@
         this.count = this.count + 1;
         this.payu.amount = this.payu.price * this.count;
 
-        
+
         this.getParameters(this.payu.amount);
       },
 
       res(){
         if (this.count > 1) {
-        
+
           this.count = this.count  - 1;
           this.payu.amount = this.payu.price * this.count;
           this.getParameters(this.payu.amount);
         }
-        
+
+      },
+
+      cancelar(){
+          this.name='';
+          this.email='';
+          this.phone='';
+          this.city='';
+          this.delivery='';
       },
 
       getParameters(amount){
 
-        
+
         axios.post('/biowellness/public/pay',{'amount':amount})
           .then(resp=>{
             this.parameters = resp.data;
-
           })
       },
 
-      
+
     },
   }
 </script>

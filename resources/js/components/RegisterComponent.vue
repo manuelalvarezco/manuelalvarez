@@ -3,11 +3,11 @@
       <h3 v-bind:class="saved ? 'text-warning' : 'text-white'" class="titulo">
         {{message}}
       </h3>
-       <form @submit.prevent="guardar"> 
+       <form @submit.prevent="guardar">
         <div class="formulario-imputs">
           <label class="formulario-imputs__label" for="email">Tu correo electrónico</label>
           <input v-model="email"  type="text" class="formulario-imputs__input" name="email" required placeholder="Correo electrónico">
-        
+
           <div class="formulario-imputs__box">
             <input type="checkbox" required class="formulario-imputs__checkbox" name="term" id="term">
             <label class="terms" for="term">Acepto la política de protección de datos personales</label>
@@ -23,18 +23,18 @@ export default {
   data() {
     return {
       email:'',
-      saved:false,  
-      message:'Regístrate y recibe los mejores concejos médicos para aumentar tu bienestar y relajación'
+      saved:false,
+      message:'Regístrate y recibe los mejores consejos médicos para aumentar tu bienestar y relajación'
     }
   },
 
   methods: {
     guardar(){
-      
+
       const params = {
         email:this.email,
       }
-      this.email = ''; 
+      this.email = '';
 
       axios.post('/biowellness/public/customers',params)
         .then( resp=>{
@@ -45,9 +45,9 @@ export default {
         this.message = 'Gracias por registrarte, pronto estaremos en contacto';
           this.saved = true;
       })
-        
-        
-      
+
+
+
     }
   },
 }

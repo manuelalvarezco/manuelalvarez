@@ -17,14 +17,14 @@
         <small class="fs-16 primary-color">con extracto de semillas de cáñamo</small>
         <div class="d-flex justify-content-center mt-4">
           <a href="#">
-            <a href="https://www.instagram.com/biowell.co/">
+            <a href="https://www.instagram.com/biowell.co/" target="_blank">
               <img width="70" src="{{url('/img/instagram.png')}}" alt="instagram">
             </a>
           </a>
-          <a href="https://www.facebook.com/Biowell.co/">
+          <a href="https://www.facebook.com/Biowell.co/" target="_blank">
           <img width="70" src="{{url('/img/facebook.png')}}" alt="facebook">
           </a>
-          
+
         </div>
         <div class="d-flex justify-content-center">
           <button class=" owned-btn__secondary" type="button" data-toggle="modal" data-target="#exampleModal">
@@ -34,29 +34,29 @@
 
       </div>
     </div>
-    <div class="col-md-6 d-flex justify-content-center">
+    <div class="col-md-6">
       <img style="max-width:100%" width="620" src="{{url('/img/producto.png')}}" alt="producto">
     </div>
-    
+
   </div>
   <div class="container mt-5 mb-4">
     <div class="row">
       <div class="col-md-12 d-flex justify-content-center">
         <div class="d-flex">
           <div class="group">
-            <div class="d-flex align-items-center ml-owned mr-2">
+            <div class="group-item">
               <img src="{{url('/img/icono.png')}}" width="55" alt="icono">
               <span class="fs-22">Relajante</span>
             </div>
           </div>
           <div class="group">
-            <div class="d-flex align-items-center ml-owned mr-2">
+            <div class="group-item">
               <img src="{{url('/img/icono.png')}}" width="55" alt="icono">
               <span class="fs-22">Humectante</span>
             </div>
           </div>
           <div class="group">
-            <div class="d-flex align-items-center ml-owned mr-2">
+            <div class="group-item">
               <img src="{{url('/img/icono.png')}}" width="55" alt="icono">
               <span class="fs-22">Refrescante</span>
             </div>
@@ -65,10 +65,10 @@
       </div>
     </div>
   </div>
-  
-    
+
+
     </div>
-    
+
 </div>
     <div class="mb-4">
       <div class="footer">
@@ -82,7 +82,7 @@
     </div>
     <div class="container">
         <div class="row">
-        <div class="col-md-5 offset-1">
+        <div class="col-md-5 offset-owner">
           <img src="{{url('/img/icono.png')}}" width="55" alt="icono">
           <p class="fs-20 subtitulo">Biowell es una crema corporal con efecto relajante y refrescante que te ayuda a <b>reducir de manera real la sensación
             de hinchazón y pesadez,</b> además te ayuda a <b>mejorar visblemente la apariencia de la piel</b></p>
@@ -96,7 +96,7 @@
                 <span class="owned-btn__text">Comprar</span>
             </button>
         </div>
-        <div class="col-md-6 d-flex justify-content-center">
+        <div class="col-md-6">
           <img style="max-width:100%" width="620" src="{{url('/img/individual.png')}}" alt="producto">
         </div>
       </div>
@@ -142,26 +142,26 @@
             </div>
           </div>
       </div>
-      
+
       </div>
-      
+
       <div class="row">
           <div class="col-md-12 d-flex justify-content-center">
             <div class="d-flex">
               <div class="group">
-                <div class="d-flex align-items-center ml-owned mr-2">
+                <div class="group-item">
                   <img src="{{url('/img/icono.png')}}" width="55" alt="icono">
                   <span class="fs-22">Relajante</span>
                 </div>
               </div>
               <div class="group">
-                <div class="d-flex align-items-center ml-2 mr-2">
+                <div class="group-item">
                   <img src="{{url('/img/icono.png')}}" width="55" alt="icono">
                   <span class="fs-22">Humectante</span>
                 </div>
               </div>
               <div class="group">
-                <div class="d-flex align-items-center ml-owned mr-2">
+                <div class="group-item">
                   <img src="{{url('/img/icono.png')}}" width="55" alt="icono">
                   <span class="fs-22">Refrescante</span>
                 </div>
@@ -170,12 +170,12 @@
           </div>
         </div>
       <div class="d-flex justify-content-center">
-        
+
         <img style="max-width:600px" src="{{url('/img/individual.png')}}" alt="biowell">
       </div>
-      
 
-      
+
+
     <div class="mt-4 mb-4">
       <div class="mb-5">
         <h3 class="ingredients-title text-center mt-4 mb-4">Ingredientes naturales</h3>
@@ -278,7 +278,7 @@
 
           <img style="max-width:100%" width="320" src="{{url('/img/individual.png')}}" alt="producto">
         </div>
-        
+
       </div>
       <pay-form-component></pay-form-component>
     </div>
