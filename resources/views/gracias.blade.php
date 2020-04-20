@@ -8,7 +8,7 @@
 <div style="min-height:300px;background-color:#25A5A4" class="d-flex justify-content-center align-items-center text-center" style="padding-bottom: 0;">
 
   <div class="container d-flex flex-column">
-    <h1 style="font-size: 8em;font-weight: 500" class="titulo text-white display-1">Gracias!</h1>
+    <h1 class="thanks titulo text-white">Gracias!</h1>
     <div class="d-flex justify-content-center align-items-center text-center">
       <a style="text-decoration: none" class="titulo text-white" href="https://ecommerce.biowell.co">
         <img src="{{url('/img/icono-blanco.png')}}" width="55" alt="icono">
@@ -34,44 +34,64 @@
         <h5 class="mt-2 text-dark subtitulo">A continuación está el resumen de tu compra:</h5>
           <div class="row">
             <div class="col-md-6">
-              <small class="text-dark titulo">Producto</small>
+              <p class="text-dark subtitulo text-uppercase">Producto</p>
             </div>
-            <div class="col-md-6">Crema Corporal Biowell</div>
+            <div class="col-md-6">
+                <h4 class="subtitulo">
+                    Crema Corporal Biowell
+                </h4>
+            </div>
           </div>
           <div class="row">
             <div class="col-md-6">
-              <small class="text-dark titulo">Estado de la transacción</small>
+              <p class="text-dark subtitulo text-uppercase">Estado de la transacción</p>
             </div>
-            <div class="col-md-6">{{ $transactionState }}</div>
+            <div class="col-md-6">
+                <h4 class="subtitulo">
+                    {{ $transactionState }}</div>
+                </h4>
           </div>
           <div class="row">
             <div class="col-md-6">
-              <small class="text-dark titulo">Valor Pagado</small>
+              <p class="text-dark subtitulo text-uppercase">Valor Pagado</p>
             </div>
-            <div class="col-md-6">COP ${{ number_format($TX_VALUE) }}</div>
+            <div class="col-md-6">
+                <h4 class="subtitulo">
+                    COP ${{ number_format($TX_VALUE) }}</div>
+                </h4>
           </div>
           <div class="row">
             <div class="col-md-6">
-              <small class="text-dark titulo">Dirección de envío</small>
+              <p class="text-dark subtitulo text-uppercase">Dirección de envío</p>
             </div>
-            <div class="col-md-6">{{ $merchant_address }}</div>
+            <div class="col-md-6">
+                <h4 class="subtitulo">
+                    {{ $merchant_address }}</div>
+                </h4>
           </div>
           <div class="row">
             <div class="col-md-6">
-              <small class="text-dark titulo">Código de referencia</small>
+              <p class="text-dark subtitulo text-uppercase">Código de referencia</p>
             </div>
-            <div class="col-md-6">{{ $referenceCode }}</div>
+            <div class="col-md-6">
+                <h4 class="subtitulo">
+                    {{ $referenceCode }}</div>
+                </h4>
           </div>
           <div class="row">
             <div class="col-md-6">
-              <small class="text-dark titulo">Método de pago</small>
+              <p class="text-dark subtitulo text-uppercase">Método de pago</p>
             </div>
-            <div class="col-md-6">{{ $lapPaymentMethod }}</div>
+            <div class="col-md-6">
+                <h4 class="subtitulo">
+                    {{ $lapPaymentMethod }}</div>
+                </h4>
           </div>
           <div class="p-mobile">
-            <small>* Algunos datos se ocultan por seguridad</small>
+            <h6>* Algunos datos se ocultan por seguridad</p>
           </div>
 
+          <p class="text-center subtitulo">TIENES DUDAS?  ESCRÍBENOS <a style="text-decoration:none" href="{{ url('contact') }}">AQUÍ</a> </p>
       </div>
     </div>
   </div>

@@ -140,21 +140,3 @@
     text-decoration: none;
     color: white;
 }
-
-//gracias
-.datos-usuario {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    @media screen and(max-width: 767px) {
-        text-align: center;
-    }
-}
-
-.p-mobile {
-    display: flex;
-    margin-top: 0.5rem !important;
-    @media screen and(max-width: 767px) {
-        justify-content: center;
-    }
-}

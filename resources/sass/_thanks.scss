@@ -1,0 +1,31 @@
+//gracias
+.datos-usuario {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media screen and(max-width: 767px) {
+        text-align: center;
+    }
+}
+
+.p-mobile {
+    display: flex;
+    margin-top: 0.5rem !important;
+    @media screen and(max-width: 767px) {
+        justify-content: center;
+    }
+}
+
+.thanks {
+    font-size: 8em;
+    font-weight: 500;
+    @media screen and(max-width: 767px) {
+        font-size: 5em;
+    }
+}
+
+.theme--light.v-application {
+    @media screen and(min-width: 767px) {
+        width: 400px!important;
+    }
+}

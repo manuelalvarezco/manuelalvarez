@@ -164,29 +164,6 @@
   color: white;
 }
 
-.datos-usuario {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-@media screen and (max-width: 767px) {
-  .datos-usuario {
-    text-align: center;
-  }
-}
-
-.p-mobile {
-  display: flex;
-  margin-top: 0.5rem !important;
-}
-
-@media screen and (max-width: 767px) {
-  .p-mobile {
-    justify-content: center;
-  }
-}
-
 .ingredients {
   display: flex;
   justify-content: center;
@@ -486,6 +463,46 @@
 @media screen and (min-width: 767px) {
   .offset-owner {
     margin-left: 8.3333333333%;
+  }
+}
+
+.datos-usuario {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 767px) {
+  .datos-usuario {
+    text-align: center;
+  }
+}
+
+.p-mobile {
+  display: flex;
+  margin-top: 0.5rem !important;
+}
+
+@media screen and (max-width: 767px) {
+  .p-mobile {
+    justify-content: center;
+  }
+}
+
+.thanks {
+  font-size: 8em;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 767px) {
+  .thanks {
+    font-size: 5em;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .theme--light.v-application {
+    width: 400px !important;
   }
 }
 

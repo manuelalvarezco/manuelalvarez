@@ -35,9 +35,19 @@ class CustomerController extends Controller
      */
     public function store(Request $request)
     {
-        
+
 
         $model = new Customer();
+
+        if ($request->names) {
+            $model->names = $request->names;
+        }
+        if ($request->phone) {
+            $model->phone = $request->phone;
+        }
+        if ($request->message) {
+            $model->message = $request->message;
+        }
 
         $model->email = $request->email;
 
