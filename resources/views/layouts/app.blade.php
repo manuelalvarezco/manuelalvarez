@@ -20,6 +20,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
+    @include('partials.navbar')
     <div id="app">
         <main>
             @yield('content')

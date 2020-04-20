@@ -501,7 +501,7 @@
 }
 
 @media screen and (min-width: 767px) {
-  .theme--light.v-application {
+  .theme--light.v-application[data-v-2b26a8a8] {
     width: 400px !important;
   }
 }

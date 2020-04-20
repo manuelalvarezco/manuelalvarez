@@ -1,3 +1,4 @@
+
 <template>
     <v-app>
 
@@ -81,6 +82,14 @@
 
     </v-app>
 </template>
+
+<style scoped>
+.theme--light.v-application {
+    @media screen and(min-width: 767px) {
+        width: 400px!important;
+    }
+}
+</style>
 
 <script>
   export default {
