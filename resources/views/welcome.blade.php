@@ -70,6 +70,7 @@
     </div>
 
 </div>
+
     <div class="mb-4">
       <div class="footer">
         <div class="contenedor">
@@ -186,19 +187,19 @@
               <div class="row">
                 <div class="col-md-4 d-flex  justify-content-center">
                   <div class="d-flex flex-column align-items-center text-center">
-                    <img width="100" src="{{url('/img/icono-blanco.png')}}" alt="Biowell">
+                    <img width="120" src="{{url('/img/sol.png')}}" alt="Biowell">
                     <h4 class="mt-5 subtitulo text-white">En la mañana te humecta</h4>
                   </div>
                 </div>
                 <div class="col-md-4 d-flex  justify-content-center">
                   <div class="d-flex flex-column align-items-center text-center">
-                    <img width="100" src="{{url('/img/icono-blanco.png')}}" alt="Biowell">
+                    <img width="100" src="{{url('/img/montanas.png')}}" alt="Biowell">
                     <h4 class="mt-5 subtitulo text-white">En la tarde te refresca</h4>
                   </div>
                 </div>
                 <div class="col-md-4 d-flex  justify-content-center">
                   <div class="d-flex flex-column align-items-center text-center ">
-                    <img width="100" src="{{url('/img/icono-blanco.png')}}" alt="Biowell">
+                    <img width="100" src="{{url('/img/luna.png')}}" alt="Biowell">
                     <h4 class="mt-5 subtitulo text-white">En la noche te relaja</h4>
 
                   </div>
@@ -207,18 +208,31 @@
             </div>
           </div>
 
-          <div class="contenedor-comparacion">
-            <div class="container d-flex justify-content-center align-items-center flex-column">
-              <h2 class="mt-5 subtitulo">Tu cuerpo y tu piel antes y después de <strong class="titulo text-dark">Biowell</strong> </h2>
-              <img style="max-width: 100%;max-height: 100%" width="500" src="https://vivanda.vteximg.com.br/arquivos/ids/165119-1000-1000/63616.jpg" alt="biowell">
+
+    <div class="container">
+        <div class="container d-flex justify-content-center align-items-center flex-column">
+            <h2 class="mt-2 subtitulo">Tu cuerpo y tu piel antes y después de <strong class="titulo text-dark">Biowell</strong> </h2>
+            <div class="row d-flex align-items-center">
+                <div class="col-md-4 text-center">
+                    <img width="400" style="max-width:100%" src="{{url('/img/manzana-podr.png')}}" alt="biowell">
+                </div>
+                <div class="col-md-4 text-center">
+                    <img width="100" style="max-width:100%" src="{{url('/img/icono.png')}}" alt="biowell">
+                </div>
+                <div class="col-md-4 text-center">
+                    <img width="400" style="max-width:100%" src="{{url('/img/manzana-nuev.png')}}" alt="biowell">
+                </div>
             </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="text-center">
+
+            <img style="max-width:100%; width: 400px" src="{{url('/img/individual.png')}}" alt="biowell">
           </div>
-
-
-      <div class="text-center">
-
-        <img style="max-width:600px" src="{{url('/img/individual.png')}}" alt="biowell">
-      </div>
+    </div>
 
 
 

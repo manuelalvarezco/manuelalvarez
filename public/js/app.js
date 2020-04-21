@@ -2049,7 +2049,7 @@ var _this2 = undefined;
         'phone': this.phone,
         'message': this.message
       };
-      axios.post('/customers', params).then(function (resp) {
+      axios.post('/wwwbiowellness/public/customers', params).then(function (resp) {
         _this.spiner = false;
         _this.overlay = true;
 
@@ -2776,7 +2776,7 @@ __webpack_require__.r(__webpack_exports__);
         email: this.email
       };
       this.email = '';
-      axios.post('/customers', params).then(function (resp) {
+      axios.post('/wwwbiowellness/public/customers', params).then(function (resp) {
         _this.message = 'Gracias por registrarte, pronto estaremos en contacto';
         _this.saved = true;
       })["catch"](function (error) {
