@@ -111,10 +111,10 @@
         description:'Crema Corporal Biowell',
         taxReturnBase:0,
         test:0,
-        responseUrl:'https://ecommerce.biowell.co/biowellness/public/gracias',
+        responseUrl:'https://ecommerce.biowell.co/site/public/gracias',
         shippingCity:'',
         shippingCountry:'CO',
-        confirmationUrl:'https://ecommerce.biowell.co/biowellness/public/responsePayU'
+        confirmationUrl:'https://ecommerce.biowell.co/site/public/responsePayU'
       },
       parameters:[],
       valid: true,
@@ -184,7 +184,7 @@
       getParameters(amount){
 
 
-        axios.post('/biowellness/public/pay',{'amount':amount})
+        axios.post('/site/public/pay',{'amount':amount})
           .then(resp=>{
             this.parameters = resp.data;
           })
