@@ -111,10 +111,10 @@
         description:'Crema Corporal Biowell',
         taxReturnBase:0,
         test:0,
-        responseUrl:'https://ecommerce.biowell.co/site/public/gracias',
         shippingCity:'',
+        responseUrl:'https://ecommerce.biowell.co/site/public/gracias',
+        confirmationUrl:'https://ecommerce.biowell.co/site/public/responsePayU',
         shippingCountry:'CO',
-        confirmationUrl:'https://ecommerce.biowell.co/site/public/responsePayU'
       },
       parameters:[],
       valid: true,
