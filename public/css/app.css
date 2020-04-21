@@ -466,6 +466,34 @@
   }
 }
 
+.contendor-imagen {
+  height: 500px;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+.contenedor-icons {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: #25A5A4;
+  min-height: 500px;
+}
+
+.contenedor-comparacion {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 767px) {
+  .justify-left {
+    margin-left: 66.6666666667%;
+  }
+}
+
 .datos-usuario {
   display: flex;
   align-items: center;

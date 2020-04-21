@@ -169,7 +169,53 @@
             </div>
           </div>
         </div>
-      <div class="d-flex justify-content-center">
+
+        <div class="contendor-imagen" style="background-image:url('https://elintranews.com/wp-content/uploads/2019/06/YOGA-1.jpg')">
+            <div style="height: 100%" class="container d-flex align-items-center">
+              <div class="col-md-4 justify-left">
+                <div class="d-flex flex-column justify-content-center align-items-center">
+                  <img width="200" src="{{url('/img/logo-biowell-blanco.png')}}" alt="Biowell">
+                  <h3 style="margin-top: 16%;" class="text-white"> Te acompaña en <br> <span class="titulo">la rutina de tu día</span> </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contenedor-icons">
+            <div style="height: 100%"  class="container d-flex align-items-center justify-content-center">
+              <div class="row">
+                <div class="col-md-4 d-flex  justify-content-center">
+                  <div class="d-flex flex-column align-items-center text-center">
+                    <img width="100" src="{{url('/img/icono-blanco.png')}}" alt="Biowell">
+                    <h4 class="mt-5 subtitulo text-white">En la mañana te humecta</h4>
+                  </div>
+                </div>
+                <div class="col-md-4 d-flex  justify-content-center">
+                  <div class="d-flex flex-column align-items-center text-center">
+                    <img width="100" src="{{url('/img/icono-blanco.png')}}" alt="Biowell">
+                    <h4 class="mt-5 subtitulo text-white">En la tarde te refresca</h4>
+                  </div>
+                </div>
+                <div class="col-md-4 d-flex  justify-content-center">
+                  <div class="d-flex flex-column align-items-center text-center ">
+                    <img width="100" src="{{url('/img/icono-blanco.png')}}" alt="Biowell">
+                    <h4 class="mt-5 subtitulo text-white">En la noche te relaja</h4>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contenedor-comparacion">
+            <div class="container d-flex justify-content-center align-items-center flex-column">
+              <h2 class="mt-5 subtitulo">Tu cuerpo y tu piel antes y después de <strong class="titulo text-dark">Biowell</strong> </h2>
+              <img style="max-width: 100%;max-height: 100%" width="500" src="https://vivanda.vteximg.com.br/arquivos/ids/165119-1000-1000/63616.jpg" alt="biowell">
+            </div>
+          </div>
+
+
+      <div class="text-center">
 
         <img style="max-width:600px" src="{{url('/img/individual.png')}}" alt="biowell">
       </div>

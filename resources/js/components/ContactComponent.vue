@@ -138,7 +138,7 @@
               'message':this.message,
 
           }
-          axios.post('/biowellness/public/customers',params)
+          axios.post('/customers',params)
             .then( resp=>{
                 this.spiner=false;
                 this.overlay = true;
