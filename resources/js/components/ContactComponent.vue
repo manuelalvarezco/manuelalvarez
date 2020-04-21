@@ -138,7 +138,7 @@
               'message':this.message,
 
           }
-          axios.post('/wwwbiowellness/public/customers',params)
+          axios.post('/site/public/customers',params)
             .then( resp=>{
                 this.spiner=false;
                 this.overlay = true;
@@ -157,3 +157,4 @@
     },
   }
 </script>
+
