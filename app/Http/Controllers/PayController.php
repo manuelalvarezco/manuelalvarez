@@ -24,7 +24,7 @@ class PayController extends Controller
         if($request->amount){
             $amount        = $request->amount;
         }else{
-            $amount = '12000';
+            $amount = '69900';
         }
 
 
@@ -123,7 +123,7 @@ class PayController extends Controller
         $processingDate = $request->processingDate;
         $merchant_address = $request->merchant_address;
 
-    
+
 
         if ($transactionState == 4 ) {
             $transactionState = "Transacción aprobada";
@@ -146,6 +146,6 @@ class PayController extends Controller
         }
 
         return view('gracias', compact('merchant_id','merchant_name','referenceCode','TX_VALUE','transactionState','lapPaymentMethod','transactionId','merchant_address','processingDate'));
-        
+
     }
 }

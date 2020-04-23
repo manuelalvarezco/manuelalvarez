@@ -105,8 +105,8 @@
     data: () => ({
       count:1,
       payu:{
-        price:12000,
-        amount:12000,
+        price:69900,
+        amount:69900,
         tax:0,
         description:'Crema Corporal Biowell',
         taxReturnBase:0,
