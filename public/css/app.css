@@ -494,6 +494,19 @@
   }
 }
 
+.bg-light {
+  background: -webkit-linear-gradient(left, #25A5A4 0%, #25A5A4 70%) !important;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: white !important;
+  font-weight: bold;
+}
+
+.navbar-owner > .nav-item > a {
+  font-family: "Libre Franklin", sans-serif;
+}
+
 .datos-usuario {
   display: flex;
   align-items: center;
