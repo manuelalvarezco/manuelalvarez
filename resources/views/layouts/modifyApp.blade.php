@@ -24,7 +24,7 @@
         <div class="container">
 
 
-          <a class="navbar-brand d-flex align-items-center" href="#">
+          <a class="navbar-brand d-flex align-items-center" href="/">
               <img src="{{ url('img/icono-blanco.png') }}" width="80" alt="logo">
               <h2 class="mt-3 titulo" style="color:white;">Biowell</h2>
             </a>
