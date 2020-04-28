@@ -28,7 +28,7 @@
 
 .items-pago {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
     @media screen and(max-width: 767px) {
