@@ -244,7 +244,7 @@
               <div class="box-item">
                 <img src="{{url('/img/canamo.jpg')}}" alt="image" class="box-item__img">
                 <h5 class="box-item__title">
-                  Semilla de camaño
+                  Semilla de cañamo
                 </h5>
                 <span class="box-item__subtitle">
                   Propiedades nutricionales y antioxidantes
