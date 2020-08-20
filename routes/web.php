@@ -18,10 +18,3 @@ Route::get('/', function () {
 });
 
 Auth::routes();
-
-Route::post('/pay','PayController@pay');
-Route::post('responsePayU','PayController@responsePayU');
-Route::resource('/customers','CustomerController');
-Route::get('/gracias','PayController@gracias');
-Route::view('/contact', 'contact');
-Route::view('/faqs', 'faqs');

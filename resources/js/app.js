@@ -22,13 +22,6 @@ import Vuetify from '../plugins/vuetify'
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
-Vue.component('register-component', require('./components/RegisterComponent.vue').default);
-Vue.component('ingredients-component', require('./components/IngredientsComponent.vue').default);
-Vue.component('main-component', require('./components/MainComponent.vue').default);
-Vue.component('mini-logo-component', require('./components/MiniLogosComponent.vue').default);
-Vue.component('pay-form-component', require('./components/PayFormComponent.vue').default);
-Vue.component('contact-form-component', require('./components/ContactComponent.vue').default);
-Vue.component('faqs-component', require('./components/FaqsComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
