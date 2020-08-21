@@ -10882,3 +10882,16 @@ a.text-dark:focus {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .navbar-web__options {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  #navbar-mobile,
+  #navbar-spacer__mobile {
+    display: none;
+  }
+}
+

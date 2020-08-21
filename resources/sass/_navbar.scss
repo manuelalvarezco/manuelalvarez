@@ -1,0 +1,12 @@
+.navbar-web__options {
+    @media screen and(max-width: 767px) {
+        display: none;
+    }
+}
+
+#navbar-mobile,
+#navbar-spacer__mobile {
+    @media screen and(min-width: 767px) {
+        display: none;
+    }
+}

@@ -1,1 +1,2 @@
 
+<toolbar-component></toolbar-component>
