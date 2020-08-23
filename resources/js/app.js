@@ -23,6 +23,12 @@ import Vuetify from '../plugins/vuetify'
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('toolbar-component', require('./components/ToolbarComponent.vue').default);
+Vue.component('main-component', require('./components/MainComponent.vue').default);
+Vue.component('footer-component', require('./components/FooterComponent.vue').default);
+Vue.component('login-component', require('./components/LoginComponent.vue').default);
+Vue.component('sidenav-component', require('./components/SidenavComponent.vue').default);
+Vue.component('toolbar-dashboard-component', require('./components/ToolbarDashboardComponent.vue').default);
+Vue.component('layout-component', require('./components/LayoutComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

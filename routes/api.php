@@ -17,3 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('projects/angular', 'Backend\ProjectController@angular');
+Route::get('projects/laravel', 'Backend\ProjectController@laravel');
+Route::get('projects/vue', 'Backend\ProjectController@vue');
+Route::get('projects/{project:slug}', 'Backend\ProjectController@indexApi');
