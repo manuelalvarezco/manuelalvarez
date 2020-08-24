@@ -3,13 +3,14 @@
 
     <v-app-bar color="indigo" dark :elevation="1" class="navbar">
         <v-toolbar-title>
-            <a href="/">Manuel Álvarez</a>
+            <a class="text-white text-decoration-none" href="/">Manuel Álvarez</a>
         </v-toolbar-title>
 
         <v-spacer></v-spacer>
         <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
         <div class="navbar-web__options">
-            <v-btn href="#" text color="white--text">Logout</v-btn>
+            <v-btn class="text-decoration-none" @click="logout()" text color="white--text">Logout</v-btn>
+
         </div>
 
     </v-app-bar>
@@ -38,7 +39,7 @@
                         <v-icon>mdi-view-dashboard</v-icon>
                     </v-list-item-icon>
                     <v-list-item-title>
-                        <a href="/dashboard/home">Dashboard</a>
+                        <a class="text-decoration-none" href="/dashboard/home">Dashboard</a>
                     </v-list-item-title>
                 </v-list-item>
 
@@ -47,7 +48,7 @@
                         <v-icon>mdi-account</v-icon>
                     </v-list-item-icon>
                     <v-list-item-title>
-                        <a href="/dashboard/profile">Profile</a>
+                        <a class="text-decoration-none" href="/dashboard/profile">Profile</a>
                     </v-list-item-title>
                 </v-list-item>
 
@@ -56,7 +57,7 @@
                         <v-icon>mdi-image</v-icon>
                     </v-list-item-icon>
                     <v-list-item-title>
-                        <a href="/dashboard/posts">Posts</a>
+                        <a class="text-decoration-none" href="/dashboard/posts">Posts</a>
                     </v-list-item-title>
                 </v-list-item>
 
@@ -65,7 +66,7 @@
                         <v-icon>mdi-image</v-icon>
                     </v-list-item-icon>
                     <v-list-item-title>
-                        <a href="/dashboard/projects">Projects</a>
+                        <a class="text-decoration-none" href="/dashboard/projects">Projects</a>
                     </v-list-item-title>
                 </v-list-item>
 
@@ -78,7 +79,7 @@
         </v-list>
         <template v-slot:append>
             <div class="pa-2">
-                <v-btn href="#" color="indigo white--text" block>Logout </v-btn>
+                <v-btn @click="logout()"  color="indigo white--text" block>Logout </v-btn>
             </div>
         </template>
     </v-navigation-drawer>
@@ -92,6 +93,12 @@ export default {
         mobile: false,
         permanent: true,
     }),
+
+    methods:{
+        logout(){
+            window.location.href = '/';
+        }
+    }
 }
 </script>
 

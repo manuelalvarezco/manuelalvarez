@@ -19,6 +19,7 @@ class CreateProjectsTable extends Migration
             $table->string('title');
             $table->string('slug')->unique();
             $table->string('tecnology');
+            $table->string('url');
             $table->string('avatar')->nullable();
             $table->string('image')->nullable();
             $table->text('body');

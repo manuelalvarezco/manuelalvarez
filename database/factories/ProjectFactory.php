@@ -10,6 +10,7 @@ $factory->define(Project::class, function (Faker $faker) {
         'user_id'   => 1,
         'title'     => $faker->sentence,
         'tecnology' => $faker->randomElement($array = array ('Laravel','Angular','Vue')),
-        'body'      => $faker->text(800)
+        'body'      => $faker->text(800),
+        'url'      => $faker->url
     ];
 });

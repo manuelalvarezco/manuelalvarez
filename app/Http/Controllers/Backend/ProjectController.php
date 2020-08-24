@@ -17,7 +17,7 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        $projects = Project::latest()->get();
+        $projects = Project::paginate(10);
 
         return view('projects.index', compact('projects'));
     }
@@ -78,15 +78,15 @@ class ProjectController extends Controller
      * @param  \App\Project  $project
      * @return \Illuminate\Http\Response
      */
-    public function update(ProjectRequest $request, Project $post)
+    public function update(ProjectRequest $request, Project $project)
     {
-        $post->update($request->all());
+        $project->update($request->all());
 
         //Imagen
         if($request->file('file')){
-            Storage::disk('public')->delete($post->image);
-            $post->image = $request->file('file')->store('projects','public');
-            $post->save();
+            Storage::disk('public')->delete($project->image);
+            $project->image = $request->file('file')->store('projects','public');
+            $project->save();
         }
 
 

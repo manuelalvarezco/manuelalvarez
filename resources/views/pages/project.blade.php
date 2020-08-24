@@ -10,11 +10,15 @@
                     <p class="card-text">
                         {{ $project->body }}
                     </p>
-                    <p class="text-muted mb-0">
-                        <em>
-                            &ndash; Realizado con {{ $project->tecnology }}
-                        </em>
-                    </p>
+                    <div class="d-flex align-items-center justify-content-lg-between flex-wrap">
+
+                        <p class="text-muted mb-0">
+                            <em>
+                                &ndash; Realizado con {{ $project->tecnology }}
+                            </em>
+                        </p>
+                        <small>URL: <a href="{{ $project->url }}">{{ $project->title }}</a></small>
+                    </div>
                 </div>
             </div>
         </div>

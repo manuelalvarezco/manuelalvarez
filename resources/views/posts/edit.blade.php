@@ -2,7 +2,6 @@
 @section('title', 'Home')
 
 @section('content')
-<div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -38,6 +37,14 @@
                             <textarea name="iframe" id="iframe" class="form-control">{{ old('iframe', $post->iframe) }}</textarea>
                         </div>
                         <div class="form-group">
+                            <label for="comment">Comentarios</label>
+                            <small></small>
+                            <select class="form-control" id="comment" name="comment" value="{{ old('comment', $post->comment) }}">
+                                <option value="1">Activo</option>
+                                <option value="0">Inactivo</option>
+                            </select>
+                          </div>
+                        <div class="form-group">
                             @csrf
                             @method('PUT')
                             <input type="submit" value="Actualizar" class="btn btn-primary">
@@ -47,5 +54,4 @@
             </div>
         </div>
     </div>
-</div>
 @endsection

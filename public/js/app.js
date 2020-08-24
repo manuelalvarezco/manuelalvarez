@@ -2724,6 +2724,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2731,6 +2732,11 @@ __webpack_require__.r(__webpack_exports__);
       mobile: false,
       permanent: true
     };
+  },
+  methods: {
+    logout: function logout() {
+      window.location.href = '/';
+    }
   }
 });
 
@@ -41323,6 +41329,7 @@ var render = function() {
                                   _c(
                                     "v-btn",
                                     {
+                                      staticClass: "text-decoration-none",
                                       attrs: {
                                         href: "/project/" + project.slug,
                                         text: "",
@@ -41331,7 +41338,7 @@ var render = function() {
                                     },
                                     [
                                       _vm._v(
-                                        "\n                                    Leer\n                                "
+                                        "\n                                    Ver Proyecto\n                                "
                                       )
                                     ]
                                   ),
@@ -41454,6 +41461,7 @@ var render = function() {
                                   _c(
                                     "v-btn",
                                     {
+                                      staticClass: "text-decoration-none",
                                       attrs: {
                                         href: "/project/" + project.slug,
                                         text: "",
@@ -41462,7 +41470,7 @@ var render = function() {
                                     },
                                     [
                                       _vm._v(
-                                        "\n                                    Read\n                                "
+                                        "\n                                    Ver Proyecto\n                                "
                                       )
                                     ]
                                   ),
@@ -41585,6 +41593,7 @@ var render = function() {
                                   _c(
                                     "v-btn",
                                     {
+                                      staticClass: "text-decoration-none",
                                       attrs: {
                                         href: "/project/" + project.slug,
                                         text: "",
@@ -41593,7 +41602,7 @@ var render = function() {
                                     },
                                     [
                                       _vm._v(
-                                        "\n                                    Read\n                                "
+                                        "\n                                    Ver Proyecto\n                                "
                                       )
                                     ]
                                   ),
@@ -41996,7 +42005,14 @@ var render = function() {
         },
         [
           _c("v-toolbar-title", [
-            _c("a", { attrs: { href: "/" } }, [_vm._v("Manuel Álvarez")])
+            _c(
+              "a",
+              {
+                staticClass: "text-white text-decoration-none",
+                attrs: { href: "/" }
+              },
+              [_vm._v("Manuel Álvarez")]
+            )
           ]),
           _vm._v(" "),
           _c("v-spacer"),
@@ -42015,7 +42031,15 @@ var render = function() {
             [
               _c(
                 "v-btn",
-                { attrs: { href: "#", text: "", color: "white--text" } },
+                {
+                  staticClass: "text-decoration-none",
+                  attrs: { text: "", color: "white--text" },
+                  on: {
+                    click: function($event) {
+                      return _vm.logout()
+                    }
+                  }
+                },
                 [_vm._v("Logout")]
               )
             ],
@@ -42041,10 +42065,11 @@ var render = function() {
                       _c(
                         "v-btn",
                         {
-                          attrs: {
-                            href: "#",
-                            color: "indigo white--text",
-                            block: ""
+                          attrs: { color: "indigo white--text", block: "" },
+                          on: {
+                            click: function($event) {
+                              return _vm.logout()
+                            }
                           }
                         },
                         [_vm._v("Logout ")]
@@ -42132,9 +42157,14 @@ var render = function() {
                       ),
                       _vm._v(" "),
                       _c("v-list-item-title", [
-                        _c("a", { attrs: { href: "/dashboard/home" } }, [
-                          _vm._v("Dashboard")
-                        ])
+                        _c(
+                          "a",
+                          {
+                            staticClass: "text-decoration-none",
+                            attrs: { href: "/dashboard/home" }
+                          },
+                          [_vm._v("Dashboard")]
+                        )
                       ])
                     ],
                     1
@@ -42150,9 +42180,14 @@ var render = function() {
                       ),
                       _vm._v(" "),
                       _c("v-list-item-title", [
-                        _c("a", { attrs: { href: "/dashboard/profile" } }, [
-                          _vm._v("Profile")
-                        ])
+                        _c(
+                          "a",
+                          {
+                            staticClass: "text-decoration-none",
+                            attrs: { href: "/dashboard/profile" }
+                          },
+                          [_vm._v("Profile")]
+                        )
                       ])
                     ],
                     1
@@ -42168,9 +42203,14 @@ var render = function() {
                       ),
                       _vm._v(" "),
                       _c("v-list-item-title", [
-                        _c("a", { attrs: { href: "/dashboard/posts" } }, [
-                          _vm._v("Posts")
-                        ])
+                        _c(
+                          "a",
+                          {
+                            staticClass: "text-decoration-none",
+                            attrs: { href: "/dashboard/posts" }
+                          },
+                          [_vm._v("Posts")]
+                        )
                       ])
                     ],
                     1
@@ -42186,9 +42226,14 @@ var render = function() {
                       ),
                       _vm._v(" "),
                       _c("v-list-item-title", [
-                        _c("a", { attrs: { href: "/dashboard/projects" } }, [
-                          _vm._v("Projects")
-                        ])
+                        _c(
+                          "a",
+                          {
+                            staticClass: "text-decoration-none",
+                            attrs: { href: "/dashboard/projects" }
+                          },
+                          [_vm._v("Projects")]
+                        )
                       ])
                     ],
                     1

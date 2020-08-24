@@ -27,8 +27,8 @@
                             </v-card-text>
 
                             <v-card-actions>
-                                <v-btn :href="'/project/'+ project.slug " text color="deep-purple accent-4">
-                                    Leer
+                                <v-btn class="text-decoration-none" :href="'/project/'+ project.slug " text color="deep-purple accent-4">
+                                    Ver Proyecto
                                 </v-btn>
 
                                 <v-spacer></v-spacer>
@@ -67,8 +67,8 @@
                             </v-card-text>
 
                             <v-card-actions>
-                                <v-btn :href="'/project/'+ project.slug " text color="deep-purple accent-4">
-                                    Read
+                                <v-btn class="text-decoration-none" :href="'/project/'+ project.slug " text color="deep-purple accent-4">
+                                    Ver Proyecto
                                 </v-btn>
 
                                 <v-spacer></v-spacer>
@@ -107,8 +107,8 @@
                             </v-card-text>
 
                             <v-card-actions>
-                                <v-btn :href="'/project/'+ project.slug " text color="deep-purple accent-4">
-                                    Read
+                                <v-btn class="text-decoration-none" :href="'/project/'+ project.slug " text color="deep-purple accent-4">
+                                    Ver Proyecto
                                 </v-btn>
 
                                 <v-spacer></v-spacer>

@@ -19,7 +19,7 @@ class CreatePostsTable extends Migration
             $table->bigInteger('user_id')->unsigned();
             $table->string('title');
             $table->string('slug')->unique();
-
+            $table->boolean('comment')->default(true);
             $table->string('image')->nullable();
             $table->text('body');
             $table->text('iframe')->nullable();

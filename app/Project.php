@@ -13,7 +13,7 @@ class Project extends Model
     use Sluggable;
 
     protected $fillable = [
-        'title', 'body', 'ifranme', 'image', 'user_id','tecnology','avatar'
+        'title', 'body', 'ifranme', 'image', 'user_id','tecnology','avatar', 'url'
     ];
 
     /**

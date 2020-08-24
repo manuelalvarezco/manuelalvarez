@@ -2,3 +2,12 @@
     text-emphasis: none;
     color: white;
 }
+
+.btn-create {
+    @media screen and(min-width: 767px) {
+        float: right;
+    }
+    @media screen and(max-width:767px) {
+        width: 100%;
+    }
+}

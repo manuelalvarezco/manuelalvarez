@@ -45,6 +45,7 @@
 
                         </div>
                     </div>
+                    @if($post->comment)
                     <form action="{{ route('comments.store') }}" method="POST">
                         @csrf
                         <div class="form-group">
@@ -56,6 +57,7 @@
                             <input type="submit" value="Enviar" class="btn btn-sm btn-primary">
                         </div>
                     </form>
+                    @endif
                 </div>
             </div>
 

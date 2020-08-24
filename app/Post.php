@@ -13,7 +13,7 @@ class Post extends Model
     use Sluggable;
 
     protected $fillable = [
-        'title', 'body', 'iframe', 'image', 'user_id'
+        'title', 'body', 'iframe', 'image', 'user_id', 'comment'
     ];
 
     /**
