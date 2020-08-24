@@ -116,7 +116,12 @@ class PostController extends Controller
 
         $post = Post::find($request->id);
 
-        $post->likes = $request->likes;
+        if($request->likes){
+            $post->likes = $request->likes;
+        }
+        if($request->hearts){
+            $post->hearts = $request->hearts;
+        }
 
         $post->update();
 

@@ -8,7 +8,7 @@
                     <v-btn icon @click="heartClick()" :color="heartColor">
                         <v-icon>mdi-heart</v-icon>
                     </v-btn>
-                    <span>{{ hearts }}</span>
+                    <span>{{ allHearts }}</span>
                 </v-row>
             </v-col>
             <v-col cols="2" sm="2" class="ml-2">
@@ -48,17 +48,17 @@ export default {
         heartColor:'',
         uptColor:'',
         showComent : false,
-        newLikes : 0
+        newLikes : 0,
+        newHearts:0
     }),
-
-    mounted(){
-        console.log('likes ',this.likes);
-        console.log('hearts ',this.hearts);
-    },
 
     computed:{
         allLikes(){
             return Number(this.likes) + this.newLikes;
+        },
+
+        allHearts(){
+            return Number(this.hearts) + this.newHearts;
         }
     },
 
@@ -73,6 +73,17 @@ export default {
 
         heartClick(post){
             this.heartColor = 'pink';
+            this.newHearts +=1;
+
+            const body = {
+                 hearts: this.allHearts,
+                 id: this.id
+             }
+
+            axios.post('/api/posts-update',body)
+                .then( resp => console.log(resp))
+
+
         },
 
         upClick(){

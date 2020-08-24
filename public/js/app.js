@@ -2043,16 +2043,16 @@ __webpack_require__.r(__webpack_exports__);
       heartColor: '',
       uptColor: '',
       showComent: false,
-      newLikes: 0
+      newLikes: 0,
+      newHearts: 0
     };
-  },
-  mounted: function mounted() {
-    console.log('likes ', this.likes);
-    console.log('hearts ', this.hearts);
   },
   computed: {
     allLikes: function allLikes() {
       return Number(this.likes) + this.newLikes;
+    },
+    allHearts: function allHearts() {
+      return Number(this.hearts) + this.newHearts;
     }
   },
   watch: {
@@ -2063,6 +2063,14 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     heartClick: function heartClick(post) {
       this.heartColor = 'pink';
+      this.newHearts += 1;
+      var body = {
+        hearts: this.allHearts,
+        id: this.id
+      };
+      axios.post('/api/posts-update', body).then(function (resp) {
+        return console.log(resp);
+      });
     },
     upClick: function upClick() {
       this.uptColor = 'primary';
@@ -40734,7 +40742,7 @@ var render = function() {
                         1
                       ),
                       _vm._v(" "),
-                      _c("span", [_vm._v(_vm._s(_vm.hearts))])
+                      _c("span", [_vm._v(_vm._s(_vm.allHearts))])
                     ],
                     1
                   )
