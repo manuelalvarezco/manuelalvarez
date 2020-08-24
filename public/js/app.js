@@ -2094,10 +2094,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
+  props: ['comment'],
   data: function data() {
     return {
       rules: [function (value) {
@@ -40787,7 +40785,7 @@ var render = function() {
             "v-row",
             { staticClass: "justify-content-between align-items-center" },
             [
-              _c("small", [_vm._v("Commentarios")]),
+              _c("small", [_vm._v("Comentarios")]),
               _vm._v(" "),
               _c(
                 "v-btn",
@@ -40832,16 +40830,6 @@ var render = function() {
             "div",
             { staticClass: "comments-box d-flex flex-column mt-4 ml-2" },
             [
-              _c("div", { staticClass: "comments-item d-flex flex-column" }, [
-                _c("span", { staticClass: "mt-4 text-muted" }, [
-                  _vm._v(
-                    "Author of “Enjoli,” NOTHING GOOD CAN COME FROM THIS, and the forthcoming EXIT INTERVIEW, a memoir of ambition, work, and Amazon. www.kristicoulter.com"
-                  )
-                ]),
-                _vm._v(" "),
-                _c("em", [_vm._v("23 Aug 2020")])
-              ]),
-              _vm._v(" "),
               _c("v-divider"),
               _vm._v(" "),
               _c("div", { staticClass: "comments-item d-flex flex-column" }, [
@@ -41405,7 +41393,7 @@ var render = function() {
                             "v-card",
                             {
                               staticClass: "mx-auto",
-                              attrs: { "max-width": "500" }
+                              attrs: { "max-width": "500", elevation: "0" }
                             },
                             [
                               _c(
@@ -41536,7 +41524,7 @@ var render = function() {
                             "v-card",
                             {
                               staticClass: "mx-auto",
-                              attrs: { "max-width": "500" }
+                              attrs: { "max-width": "500", elevation: "0" }
                             },
                             [
                               _c(
@@ -41881,7 +41869,14 @@ var render = function() {
                       ),
                       _vm._v(" "),
                       _c("v-list-item-title", [
-                        _c("a", { attrs: { href: "/" } }, [_vm._v("Home")])
+                        _c(
+                          "a",
+                          {
+                            staticClass: "text-decoration-none",
+                            attrs: { href: "/" }
+                          },
+                          [_vm._v("Home")]
+                        )
                       ])
                     ],
                     1
@@ -41897,9 +41892,14 @@ var render = function() {
                       ),
                       _vm._v(" "),
                       _c("v-list-item-title", [
-                        _c("a", { attrs: { href: "/about" } }, [
-                          _vm._v("About")
-                        ])
+                        _c(
+                          "a",
+                          {
+                            staticClass: "text-decoration-none",
+                            attrs: { href: "/about" }
+                          },
+                          [_vm._v("About")]
+                        )
                       ])
                     ],
                     1
@@ -41915,9 +41915,14 @@ var render = function() {
                       ),
                       _vm._v(" "),
                       _c("v-list-item-title", [
-                        _c("a", { attrs: { href: "/services" } }, [
-                          _vm._v("Services")
-                        ])
+                        _c(
+                          "a",
+                          {
+                            staticClass: "text-decoration-none",
+                            attrs: { href: "/services" }
+                          },
+                          [_vm._v("Services")]
+                        )
                       ])
                     ],
                     1
@@ -41933,7 +41938,14 @@ var render = function() {
                       ),
                       _vm._v(" "),
                       _c("v-list-item-title", [
-                        _c("a", { attrs: { href: "/blog" } }, [_vm._v("Blog")])
+                        _c(
+                          "a",
+                          {
+                            staticClass: "text-decoration-none",
+                            attrs: { href: "/blog" }
+                          },
+                          [_vm._v("Blog")]
+                        )
                       ])
                     ],
                     1

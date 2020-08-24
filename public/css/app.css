@@ -10905,3 +10905,9 @@ a.text-dark:focus {
   text-decoration: none;
 }
 
+.comments-item {
+  border-top: 1px solid #ccc;
+  margin-top: 5px;
+  padding: 8px 0;
+}
+

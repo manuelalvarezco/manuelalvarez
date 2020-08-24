@@ -48,7 +48,7 @@
             <v-container fluid>
                 <v-row dense>
                     <v-col v-for="project in laravel" :key="project.title" :lg="4" :md="6" :sm="12">
-                        <v-card class="mx-auto" max-width="500">
+                        <v-card class="mx-auto" max-width="500" elevation="0">
                             <v-list-item>
                                 <v-list-item-avatar color="grey">
                                     <v-img src="https://avatars2.githubusercontent.com/u/29968638?s=460&u=dc1f14def82e7452a7b0fbb8ab657d047a90dcc6&v=4">
@@ -88,7 +88,7 @@
             <v-container fluid>
                 <v-row dense>
                     <v-col v-for="project in vue" :key="project.title" :lg="4" :md="6" :sm="12">
-                        <v-card class="mx-auto" max-width="500">
+                        <v-card class="mx-auto" max-width="500" elevation="0">
                             <v-list-item>
                                 <v-list-item-avatar color="grey">
                                     <v-img src="https://avatars2.githubusercontent.com/u/29968638?s=460&u=dc1f14def82e7452a7b0fbb8ab657d047a90dcc6&v=4">

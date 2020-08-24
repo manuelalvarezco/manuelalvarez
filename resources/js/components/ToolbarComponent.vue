@@ -45,7 +45,7 @@
                         <v-icon>mdi-home</v-icon>
                     </v-list-item-icon>
                     <v-list-item-title >
-                        <a href="/">Home</a>
+                        <a class="text-decoration-none" href="/">Home</a>
                     </v-list-item-title>
                 </v-list-item>
 
@@ -54,7 +54,7 @@
                         <v-icon>mdi-account</v-icon>
                     </v-list-item-icon>
                     <v-list-item-title>
-                        <a href="/about">About</a>
+                        <a class="text-decoration-none" href="/about">About</a>
                     </v-list-item-title>
                 </v-list-item>
 
@@ -63,7 +63,7 @@
                         <v-icon>mdi-contacts</v-icon>
                     </v-list-item-icon>
                     <v-list-item-title>
-                        <a href="/services">Services</a>
+                        <a class="text-decoration-none" href="/services">Services</a>
                     </v-list-item-title>
                 </v-list-item>
 
@@ -72,7 +72,7 @@
                         <v-icon>mdi-blogger</v-icon>
                     </v-list-item-icon>
                     <v-list-item-title>
-                        <a href="/blog">Blog</a>
+                        <a class="text-decoration-none" href="/blog">Blog</a>
                     </v-list-item-title>
                 </v-list-item>
 

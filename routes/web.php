@@ -41,3 +41,5 @@ Route::middleware(['auth'])->prefix('dashboard')->group(function () {
         Route::resource('projects', 'Backend\ProjectController')
         ->except('show');
 });
+
+Route::resource('comments', 'Backend\CommentsController');
