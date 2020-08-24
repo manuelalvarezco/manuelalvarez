@@ -8,7 +8,7 @@
             <v-container fluid>
                 <v-row dense>
                     <v-col v-for="project in angular" :key="project.title" :lg="4" :md="6" :sm="12">
-                        <v-card class="mx-auto" max-width="500">
+                        <v-card class="mx-auto" max-width="500" elevation="0">
                             <v-list-item>
                                 <v-list-item-avatar color="grey">
                                     <v-img src="https://avatars2.githubusercontent.com/u/29968638?s=460&u=dc1f14def82e7452a7b0fbb8ab657d047a90dcc6&v=4">
@@ -28,7 +28,7 @@
 
                             <v-card-actions>
                                 <v-btn :href="'/project/'+ project.slug " text color="deep-purple accent-4">
-                                    Read
+                                    Leer
                                 </v-btn>
 
                                 <v-spacer></v-spacer>

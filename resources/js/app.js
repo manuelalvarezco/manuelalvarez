@@ -29,6 +29,8 @@ Vue.component('login-component', require('./components/LoginComponent.vue').defa
 Vue.component('sidenav-component', require('./components/SidenavComponent.vue').default);
 Vue.component('toolbar-dashboard-component', require('./components/ToolbarDashboardComponent.vue').default);
 Vue.component('layout-component', require('./components/LayoutComponent.vue').default);
+Vue.component('buttons-component', require('./components/ButtonsComponent.vue').default);
+Vue.component('comments-component', require('./components/CommentsComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

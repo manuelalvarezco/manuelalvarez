@@ -2,7 +2,9 @@
 <v-app>
 
     <v-app-bar color="indigo" dark :elevation="1" class="navbar">
-        <v-toolbar-title>Manuel Álvarez</v-toolbar-title>
+        <v-toolbar-title>
+            <a href="/">Manuel Álvarez</a>
+        </v-toolbar-title>
 
         <v-spacer></v-spacer>
         <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>

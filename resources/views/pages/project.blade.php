@@ -1,10 +1,9 @@
 @extends('layouts.app')
-
+@section('title', 'Projects' )
 @section('content')
-<div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
+        <div class="col-md-8 col-xs-12">
+            <div>
                 <img src="https://cdn.vuetifyjs.com/images/cards/house.jpg" class="card-img-top" alt="{{ $project->title }}">
                 <div class="card-body">
                     <h5 class="card-title">{{ $project->title }}</h5>
@@ -20,5 +19,4 @@
             </div>
         </div>
     </div>
-</div>
 @endsection

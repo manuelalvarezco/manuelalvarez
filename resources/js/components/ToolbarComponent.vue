@@ -1,22 +1,24 @@
 <template>
 <v-app>
 
-    <v-app-bar color="indigo" dark :elevation="1" class="navbar">
+    <v-app-bar color="indigo text-white" dark :elevation="1" class="navbar">
         <v-app-bar-nav-icon id="navbar-mobile" @click="drawer = true"></v-app-bar-nav-icon>
         <v-spacer id="navbar-spacer__mobile"></v-spacer>
-        <v-toolbar-title>Manuel Álvarez</v-toolbar-title>
+        <v-toolbar-title>
+            <a class="text-white text-decoration-none" href="/">Manuel Álvarez</a>
+        </v-toolbar-title>
         <v-spacer></v-spacer>
         <div class="navbar-web__options">
-            <v-btn href="/" text>Home</v-btn>
-            <v-btn href="/about"  text>About</v-btn>
-            <v-btn href="/services"  text>Services</v-btn>
-            <v-btn href="/blog" text>Blog</v-btn>
+            <v-btn class="text-decoration-none" href="/" text>Home</v-btn>
+            <v-btn class="text-decoration-none" href="/about"  text>About</v-btn>
+            <v-btn class="text-decoration-none" href="/services"  text>Services</v-btn>
+            <v-btn class="text-decoration-none" href="/blog" text>Blog</v-btn>
         </div>
 
         <v-spacer></v-spacer>
         <div class="navbar-web__options">
 
-            <v-btn href="/login"  text color="white--text">Login</v-btn>
+            <v-btn class="text-decoration-none" href="/login"  text color="white--text">Login</v-btn>
         </div>
     </v-app-bar>
 

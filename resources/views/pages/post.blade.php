@@ -1,10 +1,9 @@
 @extends('layouts.app')
-
+@section('title', 'Posts' )
 @section('content')
-<div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card mb-4">
+        <div class="col-md-8 col-xs-12">
+            <div>
                 @if ($post->image)
                         <img src="{{ $post->get_image }}" class="card-img-top">
                     @endif
@@ -27,7 +26,9 @@
                     </p>
                 </div>
             </div>
+            <buttons-component></buttons-component>
+            <comments-component></comments-component>
+
         </div>
     </div>
-</div>
 @endsection
