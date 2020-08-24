@@ -2499,7 +2499,8 @@ __webpack_require__.r(__webpack_exports__);
     var _this = this;
 
     axios.get('api/projects/angular').then(function (resp) {
-      return _this.angular = resp.data;
+      _this.angular = resp.data;
+      console.log(resp);
     });
     axios.get('api/projects/laravel').then(function (resp) {
       return _this.laravel = resp.data;
@@ -2513,6 +2514,13 @@ __webpack_require__.r(__webpack_exports__);
       if (!value) return '';
       value = value.toString();
       return value.substring(0, 140) + '...';
+    },
+    imagePipe: function imagePipe(image) {
+      if (!image) {
+        return '/images/programing.jpeg';
+      }
+
+      return "/storage/".concat(image);
     }
   }
 });
@@ -41309,8 +41317,7 @@ var render = function() {
                               _vm._v(" "),
                               _c("v-img", {
                                 attrs: {
-                                  src:
-                                    "https://cdn.vuetifyjs.com/images/cards/house.jpg",
+                                  src: _vm._f("imagePipe")(project.image),
                                   height: "200px"
                                 }
                               }),
@@ -41441,8 +41448,7 @@ var render = function() {
                               _vm._v(" "),
                               _c("v-img", {
                                 attrs: {
-                                  src:
-                                    "https://cdn.vuetifyjs.com/images/cards/house.jpg",
+                                  src: _vm._f("imagePipe")(project.image),
                                   height: "200px"
                                 }
                               }),
@@ -41573,8 +41579,7 @@ var render = function() {
                               _vm._v(" "),
                               _c("v-img", {
                                 attrs: {
-                                  src:
-                                    "https://cdn.vuetifyjs.com/images/cards/house.jpg",
+                                  src: _vm._f("imagePipe")(project.image),
                                   height: "200px"
                                 }
                               }),

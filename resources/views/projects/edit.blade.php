@@ -36,6 +36,10 @@
                             <label for="file">Imagen</label>
                             <input type="file" name="file" id="file" class="form-control">
                         </div>
+                        <div class="form-group">
+                            <label for="url">URL</label>
+                            <input type="text" name="url" id="url" class="form-control" value="{{ old('url', $project->url) }}">
+                        </div>
 
                         <div class="form-group">
                             <label for="body">Contenido *</label>

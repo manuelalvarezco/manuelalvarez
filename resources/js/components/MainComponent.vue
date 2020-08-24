@@ -20,7 +20,7 @@
                                 </v-list-item-content>
                             </v-list-item>
 
-                            <v-img src="https://cdn.vuetifyjs.com/images/cards/house.jpg" height="200px"></v-img>
+                            <v-img :src="project.image | imagePipe" height="200px"></v-img>
 
                             <v-card-text>
                                 {{project.body | slice }}
@@ -60,7 +60,7 @@
                                 </v-list-item-content>
                             </v-list-item>
 
-                            <v-img src="https://cdn.vuetifyjs.com/images/cards/house.jpg" height="200px"></v-img>
+                            <v-img :src="project.image | imagePipe" height="200px"></v-img>
 
                             <v-card-text>
                                 {{project.body | slice }}
@@ -100,7 +100,7 @@
                                 </v-list-item-content>
                             </v-list-item>
 
-                            <v-img src="https://cdn.vuetifyjs.com/images/cards/house.jpg" height="200px"></v-img>
+                            <v-img :src="project.image | imagePipe" height="200px"></v-img>
 
                             <v-card-text>
                                 {{project.body | slice }}
@@ -141,7 +141,10 @@ export default {
     mounted() {
         axios.get('api/projects/angular')
             .then(
-                resp => this.angular = resp.data
+                resp => {
+                    this.angular = resp.data
+                    console.log(resp)
+                    }
             );
 
         axios.get('api/projects/laravel')
@@ -160,6 +163,13 @@ export default {
             if (!value) return ''
             value = value.toString()
             return value.substring(0, 140) + '...';
+        },
+
+        imagePipe(image){
+            if(!image){
+                return '/images/programing.jpeg';
+            }
+            return `/storage/${image}`;
         }
     }
 }

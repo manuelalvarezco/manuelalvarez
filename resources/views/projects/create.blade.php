@@ -28,6 +28,10 @@
                             <input type="file" name="file" id="file" class="form-control">
                         </div>
                         <div class="form-group">
+                            <label for="url">URL</label>
+                            <input type="text" name="url" id="url" class="form-control">
+                        </div>
+                        <div class="form-group">
                             <label for="tecnology">Tecnology</label>
                             <select class="form-control" id="tecnology" name="tecnology">
                               <option value="Angular">Angular</option>

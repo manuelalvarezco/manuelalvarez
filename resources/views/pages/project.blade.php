@@ -4,8 +4,15 @@
     <div class="row justify-content-center">
         <div class="col-md-8 col-xs-12">
             <div>
-                <img src="https://cdn.vuetifyjs.com/images/cards/house.jpg" class="card-img-top" alt="{{ $project->title }}">
+                @if ($project->image)
+                        <img src="{{ $project->get_image }}" class="card-img-top">
+                    @endif
                 <div class="card-body">
+                    @if($project->iframe)
+                        <div class="embed-responsive embed-responsive-16by9">
+                        {!! $project->iframe !!}
+                        </div>
+                    @endif
                     <h5 class="card-title">{{ $project->title }}</h5>
                     <p class="card-text">
                         {{ $project->body }}
