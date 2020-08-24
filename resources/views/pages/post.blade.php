@@ -29,6 +29,8 @@
                         </em>
                         {{ $post->created_at->format('d M Y') }}
                     </p>
+                    <buttons-component id="{{ $post->id }}" likes="{{ $post->likes }}" hearts="{{ $post->hearts }}" ></buttons-component>
+                    @if($post->comment)
                     <div class="container">
                         <div class="row justify-content-between align-items-center">
                             <small>Comentarios</small>
@@ -45,7 +47,7 @@
 
                         </div>
                     </div>
-                    @if($post->comment)
+
                     <form action="{{ route('comments.store') }}" method="POST">
                         @csrf
                         <div class="form-group">

@@ -2037,19 +2037,44 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
+  props: ["likes", "hearts", "id"],
   data: function data() {
     return {
-      rules: [function (value) {
-        return !!value || 'Required.';
-      }, function (value) {
-        return (value || '').length <= 50 || 'Max 20 characters';
-      }],
-      showComent: false
+      heartColor: '',
+      uptColor: '',
+      showComent: false,
+      newLikes: 0
     };
   },
+  mounted: function mounted() {
+    console.log('likes ', this.likes);
+    console.log('hearts ', this.hearts);
+  },
+  computed: {
+    allLikes: function allLikes() {
+      return Number(this.likes) + this.newLikes;
+    }
+  },
+  watch: {
+    allLikes: function allLikes(newValue, oldValue) {
+      return newValue;
+    }
+  },
   methods: {
-    toogleShowComents: function toogleShowComents() {
-      this.showComent = !this.showComent;
+    heartClick: function heartClick(post) {
+      this.heartColor = 'pink';
+    },
+    upClick: function upClick() {
+      this.uptColor = 'primary';
+      this.newLikes += 1;
+      var body = {
+        likes: this.allLikes,
+        id: this.id
+      };
+      console.log(body);
+      axios.post('/api/posts-update', body).then(function (resp) {
+        return console.log(resp);
+      });
     }
   }
 });
@@ -40697,12 +40722,19 @@ var render = function() {
                     [
                       _c(
                         "v-btn",
-                        { attrs: { icon: "" } },
+                        {
+                          attrs: { icon: "", color: _vm.heartColor },
+                          on: {
+                            click: function($event) {
+                              return _vm.heartClick()
+                            }
+                          }
+                        },
                         [_c("v-icon", [_vm._v("mdi-heart")])],
                         1
                       ),
                       _vm._v(" "),
-                      _c("span", [_vm._v("23")])
+                      _c("span", [_vm._v(_vm._s(_vm.hearts))])
                     ],
                     1
                   )
@@ -40720,12 +40752,19 @@ var render = function() {
                     [
                       _c(
                         "v-btn",
-                        { attrs: { icon: "" } },
+                        {
+                          attrs: { icon: "", color: _vm.uptColor },
+                          on: {
+                            click: function($event) {
+                              return _vm.upClick()
+                            }
+                          }
+                        },
                         [_c("v-icon", [_vm._v("mdi-thumb-up")])],
                         1
                       ),
                       _vm._v(" "),
-                      _c("span", [_vm._v("23")])
+                      _c("span", [_vm._v(_vm._s(_vm.allLikes))])
                     ],
                     1
                   )

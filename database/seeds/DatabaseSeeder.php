@@ -21,6 +21,5 @@ class DatabaseSeeder extends Seeder
 
         factory(App\Post::class, 24)->create();
         factory(App\Project::class, 24)->create();
-        factory(App\Comment::class, 24)->create();
     }
 }

@@ -109,4 +109,20 @@ class PostController extends Controller
 
         return back()->with('status', 'Delete Correctly!');
     }
+
+
+
+    public function postsUpdate(Request $request){
+
+        $post = Post::find($request->id);
+
+        $post->likes = $request->likes;
+
+        $post->update();
+
+        return response()->json([
+            'status' => 'Ok',
+            'post'   => $post
+        ]);
+    }
 }

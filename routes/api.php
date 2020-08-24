@@ -22,3 +22,5 @@ Route::get('projects/angular', 'Backend\ProjectController@angular');
 Route::get('projects/laravel', 'Backend\ProjectController@laravel');
 Route::get('projects/vue', 'Backend\ProjectController@vue');
 Route::get('projects/{project:slug}', 'Backend\ProjectController@indexApi');
+
+Route::post('posts-update', 'Backend\PostController@postsUpdate');
