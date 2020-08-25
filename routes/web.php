@@ -45,6 +45,8 @@ Route::middleware(['auth'])->prefix('dashboard')->group(function () {
 
         Route::resource('certificates', 'Backend\CertificateController');
 
+        Route::resource('customers', 'Backend\CustomerController');
+
         Route::get('profile','Backend\ProfileController@profile');
 });
 

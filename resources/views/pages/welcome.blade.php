@@ -5,4 +5,5 @@
 
 @section('content')
     <main-component></main-component>
+    <contact-component></contact-component>
 @endsection

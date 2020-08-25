@@ -27,3 +27,4 @@ Route::post('posts-update', 'Backend\PostController@postsUpdate');
 
 Route::get('certificates','Backend\CertificateController@certificates');
 Route::get('services','Backend\ServicesController@services');
+Route::post('customers', 'Backend\CustomerController@store');

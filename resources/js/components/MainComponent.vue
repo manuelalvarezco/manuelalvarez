@@ -33,7 +33,7 @@
 
                             <v-card-actions>
                                 <v-btn class="text-decoration-none" :href="'/project/'+ project.slug " text color="deep-purple accent-4">
-                                    Ver Proyecto
+                                    Read
                                 </v-btn>
 
                                 <v-spacer></v-spacer>
@@ -73,7 +73,7 @@
 
                             <v-card-actions>
                                 <v-btn class="text-decoration-none" :href="'/project/'+ project.slug " text color="deep-purple accent-4">
-                                    Ver Proyecto
+                                    Read
                                 </v-btn>
 
                                 <v-spacer></v-spacer>
@@ -113,7 +113,7 @@
 
                             <v-card-actions>
                                 <v-btn class="text-decoration-none" :href="'/project/'+ project.slug " text color="deep-purple accent-4">
-                                    Ver Proyecto
+                                    Read
                                 </v-btn>
 
                                 <v-spacer></v-spacer>

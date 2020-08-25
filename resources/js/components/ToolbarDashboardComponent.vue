@@ -83,6 +83,14 @@
                         <a class="text-decoration-none" href="/dashboard/services">Services</a>
                     </v-list-item-title>
                 </v-list-item>
+                <v-list-item>
+                    <v-list-item-icon>
+                        <v-icon>mdi-image</v-icon>
+                    </v-list-item-icon>
+                    <v-list-item-title>
+                        <a class="text-decoration-none" href="/dashboard/customers">Customers</a>
+                    </v-list-item-title>
+                </v-list-item>
 
                     <v-list-item-icon>
                         <v-switch v-model="permanent" class="ma-2"></v-switch>

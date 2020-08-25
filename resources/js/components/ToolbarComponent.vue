@@ -12,6 +12,7 @@
             <v-btn class="text-decoration-none" href="/" text>Home</v-btn>
             <v-btn class="text-decoration-none" href="/about"  text>About</v-btn>
             <v-btn class="text-decoration-none" href="/services"  text>Services</v-btn>
+            <v-btn class="text-decoration-none" href="#contact"  text>Contact</v-btn>
             <v-btn class="text-decoration-none" href="/blog" text>Blog</v-btn>
         </div>
 
@@ -33,7 +34,7 @@
             <v-list-item link>
                 <v-list-item-content>
                     <v-list-item-title class="title">Manuel Álvarez</v-list-item-title>
-                    <v-list-item-subtitle>hola@manuelalvarez.co</v-list-item-subtitle>
+                    <v-list-item-subtitle>contacto@manuelalvarez.co</v-list-item-subtitle>
                 </v-list-item-content>
             </v-list-item>
         </v-list>
@@ -73,6 +74,14 @@
                     </v-list-item-icon>
                     <v-list-item-title>
                         <a class="text-decoration-none" href="/blog">Blog</a>
+                    </v-list-item-title>
+                </v-list-item>
+                <v-list-item>
+                    <v-list-item-icon>
+                        <v-icon>mdi-blogger</v-icon>
+                    </v-list-item-icon>
+                    <v-list-item-title>
+                        <a class="text-decoration-none" href="#contact">Contact</a>
                     </v-list-item-title>
                 </v-list-item>
 
