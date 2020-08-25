@@ -1,5 +1,5 @@
 @extends('layouts.dashboard')
-
+@section('title', 'Create Project')
 @section('content')
     <div class="row justify-content-center">
         <div class="col-md-8">

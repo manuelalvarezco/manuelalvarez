@@ -24,3 +24,6 @@ Route::get('projects/vue', 'Backend\ProjectController@vue');
 Route::get('projects/{project:slug}', 'Backend\ProjectController@indexApi');
 
 Route::post('posts-update', 'Backend\PostController@postsUpdate');
+
+Route::get('certificates','Backend\CertificateController@certificates');
+Route::get('services','Backend\ServicesController@services');

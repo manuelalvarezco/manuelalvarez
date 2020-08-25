@@ -1,7 +1,12 @@
 @extends('layouts.app')
-@section('title', 'Posts' )
+@section('title', 'Blog' )
 @section('content')
 <div class="row justify-content-center">
+    <div class="container">
+        <div class="image-bg"
+        ></div>
+
+    </div>
     <div class="col-md-8 col-xs-12">
         @foreach ($posts as $post)
         <div class="mb-4">

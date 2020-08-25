@@ -40,6 +40,12 @@ Route::middleware(['auth'])->prefix('dashboard')->group(function () {
 
         Route::resource('projects', 'Backend\ProjectController')
         ->except('show');
+
+        Route::resource('services', 'Backend\ServicesController');
+
+        Route::resource('certificates', 'Backend\CertificateController');
+
+        Route::get('profile','Backend\ProfileController@profile');
 });
 
 Route::resource('comments', 'Backend\CommentsController');

@@ -15,37 +15,33 @@
 
                     <div class="container">
                         <div class="row">
-                            @foreach($posts as $post)
-                            <div class="col-md-4">
-                                <div class="card mb-2">
-                                    <div class="card-body">
-                                        <h5 class="card-title">
-                                            {{ $post->title }}
-                                        </h5>
-                                        @if ($post->image)
-                                            <img src="{{ $post->get_image }}" class="card-img-top">
-                                        @endif
-                                        @if($post->iframe)
-                                            <div class="embed-responsive embed-responsive-16by9">
-                                            {!! $post->iframe !!}
-                                            </div>
-                                        @endif
-                                        <p class="card-text">
-                                            {{ $post->get_excerpt }}
-                                        </p>
-                                        <div class="d-flex justify-content-between">
-                                            <a class="card-link" href="{{ route('posts.edit', $post) }}"  class="btn btn-sm btn-success">Editar</a>
-                                            <form action="{{ route('posts.destroy', $post) }}" method="POST">
-                                                @csrf
-                                                @method('DELETE')
-                                                <button type="submit" class="btn btn-outline-danger" onclick="return confirm('¿Are you Sure?')">Eliminar</button>
-                                            </form>
+                            <div class="card-columns">
+                                @foreach($posts as $post)
+                                <div class="card">
+                                  <div class="card-body">
+                                    @if ($post->image)
+                                    <img src="{{ $post->get_image }}" class="card-img-top">
+                                    @endif
+                                    @if($post->iframe)
+                                        <div class="embed-responsive embed-responsive-16by9">
+                                        {!! $post->iframe !!}
                                         </div>
+                                    @endif
+                                    <h5 class="card-title mt-2">{{ $post->title }}</h5>
+                                    <p class="card-text">{{ $post->get_excerpt }}</p>
+                                    <p class="card-text"><small class="text-muted">{{ $post->tecnology }}</small></p>
+                                    <div class="d-flex justify-content-between">
+                                        <a class="btn btn-outline-success" href="{{ route('posts.edit', $post) }}"  class="btn btn-sm btn-success">Editar</a>
+                                        <form action="{{ route('posts.destroy', $post) }}" method="POST">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="btn btn-outline-danger" onclick="return confirm('¿Are you Sure?')">Eliminar</button>
+                                        </form>
                                     </div>
-
+                                  </div>
                                 </div>
-                            </div>
-                            @endforeach
+                                @endforeach
+                              </div>
                         </div>
                     </div>
                     {{ $posts->links() }}

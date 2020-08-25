@@ -36,7 +36,6 @@
             </v-chip>
         </v-row>
 
-
     </v-container>
 </v-app>
 </template>
@@ -45,25 +44,27 @@
 export default {
     props: ["likes", "hearts", "id"],
     data: () => ({
-        heartColor:'',
-        uptColor:'',
-        showComent : false,
-        newLikes : 0,
-        newHearts:0
+        heartColor: '',
+        uptColor: '',
+        showComent: false,
+        newLikes: 0,
+        newHearts: 0,
+        countLikes: 0,
+        countHearts: 0
     }),
 
-    computed:{
-        allLikes(){
+    computed: {
+        allLikes() {
             return Number(this.likes) + this.newLikes;
         },
 
-        allHearts(){
+        allHearts() {
             return Number(this.hearts) + this.newHearts;
         }
     },
 
-    watch:{
-        allLikes(newValue, oldValue){
+    watch: {
+        allLikes(newValue, oldValue) {
             return newValue;
 
         }
@@ -71,44 +72,60 @@ export default {
 
     methods: {
 
-        heartClick(post){
+        heartClick(post) {
             this.heartColor = 'pink';
-            this.newHearts +=1;
 
-            const body = {
-                 hearts: this.allHearts,
-                 id: this.id
-             }
+            if (this.newHearts < 1) {
 
-            axios.post('/api/posts-update',body)
-                .then( resp => console.log(resp))
+                this.newHearts += 1;
 
+                const body = {
+                    hearts: this.allHearts,
+                    id: this.id
+                }
+
+                axios.post('/api/posts-update', body)
+                    .then(resp => {
+                        if (resp.status === 'Ok') {
+                            this.countHearts += 1;
+                        }
+                    })
+
+            }
+
+            return;
 
         },
 
-        upClick(){
-             this.uptColor = 'primary';
-             this.newLikes +=1;
+        upClick() {
+            this.uptColor = 'primary';
 
+            if (this.newLikes < 1) {
 
-             const body = {
-                 likes: this.allLikes,
-                 id: this.id
-             }
+                this.newLikes += 1;
 
-            console.log(body);
+                const body = {
+                    likes: this.allLikes,
+                    id: this.id
+                }
 
+                axios.post('/api/posts-update', body)
+                    .then(resp => {
+                        if (resp.status === 'Ok') {
+                            this.countLikes += 1;
+                        }
+                    })
+            }
 
-            axios.post('/api/posts-update',body)
-                .then( resp => console.log(resp))
+            return;
         }
     }
 }
 </script>
 
 <style scoped>
-    .v-application,
-    .v-application--wrap{
-        max-height: 200px!important;
-    }
+.v-application,
+.v-application--wrap {
+    max-height: 200px !important;
+}
 </style>

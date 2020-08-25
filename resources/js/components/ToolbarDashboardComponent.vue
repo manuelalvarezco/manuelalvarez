@@ -8,10 +8,6 @@
 
         <v-spacer></v-spacer>
         <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
-        <div class="navbar-web__options">
-            <v-btn class="text-decoration-none" @click="logout()" text color="white--text">Logout</v-btn>
-
-        </div>
 
     </v-app-bar>
 
@@ -70,6 +66,24 @@
                     </v-list-item-title>
                 </v-list-item>
 
+                <v-list-item>
+                    <v-list-item-icon>
+                        <v-icon>mdi-image</v-icon>
+                    </v-list-item-icon>
+                    <v-list-item-title>
+                        <a class="text-decoration-none" href="/dashboard/certificates">Certificates</a>
+                    </v-list-item-title>
+                </v-list-item>
+
+                <v-list-item>
+                    <v-list-item-icon>
+                        <v-icon>mdi-image</v-icon>
+                    </v-list-item-icon>
+                    <v-list-item-title>
+                        <a class="text-decoration-none" href="/dashboard/services">Services</a>
+                    </v-list-item-title>
+                </v-list-item>
+
                     <v-list-item-icon>
                         <v-switch v-model="permanent" class="ma-2"></v-switch>
                     </v-list-item-icon>
@@ -77,11 +91,6 @@
 
             </v-list-item-group>
         </v-list>
-        <template v-slot:append>
-            <div class="pa-2">
-                <v-btn @click="logout()"  color="indigo white--text" block>Logout </v-btn>
-            </div>
-        </template>
     </v-navigation-drawer>
 </v-app>
 </template>

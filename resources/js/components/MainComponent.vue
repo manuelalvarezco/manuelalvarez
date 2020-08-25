@@ -1,5 +1,10 @@
 <template>
 <v-app>
+    <div class="container">
+        <div class="image-bg"
+        ></div>
+
+    </div>
     <v-tabs background-color="white" color="indigo ighten-5" right show-arrows>
         <v-tab>Angular</v-tab>
         <v-tab>Laravel</v-tab>
@@ -143,7 +148,6 @@ export default {
             .then(
                 resp => {
                     this.angular = resp.data
-                    console.log(resp)
                     }
             );
 

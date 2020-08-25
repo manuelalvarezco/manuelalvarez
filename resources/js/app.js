@@ -31,6 +31,8 @@ Vue.component('toolbar-dashboard-component', require('./components/ToolbarDashbo
 Vue.component('layout-component', require('./components/LayoutComponent.vue').default);
 Vue.component('buttons-component', require('./components/ButtonsComponent.vue').default);
 Vue.component('comments-component', require('./components/CommentsComponent.vue').default);
+Vue.component('services-component', require('./components/ServicesComponent.vue').default);
+Vue.component('cetificates-component', require('./components/CertificatesComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

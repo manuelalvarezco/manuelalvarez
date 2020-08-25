@@ -21,5 +21,7 @@ class DatabaseSeeder extends Seeder
 
         factory(App\Post::class, 24)->create();
         factory(App\Project::class, 24)->create();
+        factory(App\Certificate::class, 10)->create();
+        factory(App\Service::class, 10)->create();
     }
 }
