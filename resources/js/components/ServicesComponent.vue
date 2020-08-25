@@ -1,7 +1,7 @@
 <template>
 <v-app>
     <div class="container mt-4">
-        <span>Servicios</span>
+        <span>SERVICES</span>
     </div>
     <v-row >
         <v-col

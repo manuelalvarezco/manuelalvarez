@@ -12,7 +12,7 @@
             <v-btn class="text-decoration-none" href="/" text>Home</v-btn>
             <v-btn class="text-decoration-none" href="/about"  text>About</v-btn>
             <v-btn class="text-decoration-none" href="/services"  text>Services</v-btn>
-            <v-btn class="text-decoration-none" href="#contact"  text>Contact</v-btn>
+            <v-btn class="text-decoration-none" href="/contact"  text>Contact</v-btn>
             <v-btn class="text-decoration-none" href="/blog" text>Blog</v-btn>
         </div>
 
@@ -81,7 +81,7 @@
                         <v-icon>mdi-blogger</v-icon>
                     </v-list-item-icon>
                     <v-list-item-title>
-                        <a class="text-decoration-none" href="#contact">Contact</a>
+                        <a class="text-decoration-none" href="/contact">Contact</a>
                     </v-list-item-title>
                 </v-list-item>
 

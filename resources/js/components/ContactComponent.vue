@@ -21,7 +21,7 @@
                                 <v-checkbox v-model="checkbox" :rules="[v => !!v || 'You must agree to continue!']" label="Términos" required></v-checkbox>
                                 <a href="#">Ver términos</a>
                             </div>
-                            <button :disabled="!valid" type="submit" class="btn btn-primary">Submit</button>
+                            <button :disabled="!valid" type="submit" class="btn btn-primary btn-block">Submit</button>
                         </v-form>
                     </div>
                     <div class="col-md-6 hidden-sm-and-down contact-bg">

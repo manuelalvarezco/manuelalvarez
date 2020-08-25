@@ -10913,6 +10913,12 @@ a.text-dark:focus {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .btn-owned {
+    width: 100%;
+  }
+}
+
 .text-decoration-none {
   text-decoration: none;
 }

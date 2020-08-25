@@ -1,7 +1,7 @@
 <template>
 <v-app>
     <div class="container mt-4">
-        <span>Certificados</span>
+        <span>CERTIFICATES</span>
     </div>
 
     <v-row>

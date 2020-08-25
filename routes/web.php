@@ -24,6 +24,7 @@ Route::get('projects',    'PageController@projects');
 Route::get('project/{project:slug}',    'PageController@project')->name('project');
 
 
+Route::get('/contact',            'PageController@contact');
 Route::get('/about',            'PageController@about');
 Route::get('/services',         'PageController@services');
 Route::get('/blog',             'PageController@posts');
