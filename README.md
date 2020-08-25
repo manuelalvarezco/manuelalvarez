@@ -82,7 +82,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 ## Add storage link
 
 <?php
-example.com/symlink.php
+//example.com/symlink.php
 $targetFolder = $_SERVER['DOCUMENT_ROOT'].'/laravel/storage/app/public';
 $linkFolder = $_SERVER['DOCUMENT_ROOT'].'/storage';
 symlink($targetFolder,$linkFolder);

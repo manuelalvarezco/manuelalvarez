@@ -1,6 +1,6 @@
 <template>
 <v-app>
-    <div class="container mt-4" id="contact">
+    <div class="container mt-4">
         <div class="row justify-content-center">
             <div class="col-md-10">
                 <h5 class="text-center">CONTACT</h5>
@@ -21,7 +21,8 @@
                                 <v-checkbox v-model="checkbox" :rules="[v => !!v || 'You must agree to continue!']" label="Términos" required></v-checkbox>
                                 <a href="#">Ver términos</a>
                             </div>
-                            <button :disabled="!valid" type="submit" class="btn btn-primary btn-block">Submit</button>
+                            <button v-show="!sent" :disabled="!valid" type="submit" class="btn btn-primary btn-block">Submit</button>
+                            <button v-show="sent" type="reset" class="btn btn-success btn-block">It was sent!</button>
                         </v-form>
                     </div>
                     <div class="col-md-6 hidden-sm-and-down contact-bg">
@@ -32,6 +33,17 @@
 
     </div>
 
+    <div class="text-center ma-2">
+        <v-snackbar v-model="snackbar" :timeout="timeout">
+            {{ text }}
+
+            <template v-slot:action="{ attrs }">
+                <v-btn color="blue" text v-bind="attrs" @click="snackbar = false">
+                    Close
+                </v-btn>
+            </template>
+        </v-snackbar>
+    </div>
 </v-app>
 </template>
 
@@ -43,7 +55,6 @@ export default {
             name: '',
             nameRules: [
                 v => !!v || 'Name is required',
-                v => (v && v.length <= 10) || 'Name must be less than 10 characters',
             ],
             email: '',
             emailRules: [
@@ -56,8 +67,11 @@ export default {
                 v => (v && v.length <= 100) || 'Name must be less than 100 characters',
             ],
             checkbox: false,
-            saved: false,
             lazy: false,
+            sent: false,
+            snackbar: false,
+            text: 'Sent!!',
+            timeout: 5000,
         }
     },
 
@@ -77,12 +91,23 @@ export default {
             axios.post('/api/customers', params)
                 .then(resp => {
                     console.log(resp);
+                    if (resp.status) {
+                        this.snackbar = true;
+                        this.sent = true;
+                        this.email = 'Your@email.com';
+                        this.name = 'Your name';
+                        this.message = 'Your message';
+                    }
                 })
                 .catch(error => {
                     console.log(error);
                 })
 
-        }
+        },
+
+        reset() {
+            this.$refs.form.reset()
+        },
     },
 }
 </script>

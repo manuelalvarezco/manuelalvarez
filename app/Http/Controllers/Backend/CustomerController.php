@@ -42,23 +42,22 @@ class CustomerController extends Controller
      */
     public function store(CustomerRequest $request)
     {
-
-
         //save
         $customer = Customer::create($request->all());
         $customer->save();
         //MAIL
 
 
+        /*
         $data=[
-            'title'     => 'Nuevo Mensaje Desde la página'
+            'title'  => 'Nuevo Mensaje Desde la página'
         ];
 
         Mail::send('emails.message', $data, function ($message) {
             $message->to('contacto@manuelalvarez.co', 'Manuel Alvarez');
-            $message->cc('alvarezbautista.luis@gmail.com', 'John Doe');
             $message->subject('Nuevo mensaje');
         });
+        */
 
         //Return
         return response()->json([
