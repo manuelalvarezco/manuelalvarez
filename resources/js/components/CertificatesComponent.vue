@@ -16,9 +16,9 @@
 
                 <v-card-subtitle>
                     {{ certificate.school }}
-                </v-card-subtitle>
-                <v-card-subtitle>
-                    {{ certificate.url }}
+                <a :href="certificate.url" text color="deep-purple accent-4" target="_blank">
+                    URL
+                </a>
                 </v-card-subtitle>
             </v-card>
         </v-col>

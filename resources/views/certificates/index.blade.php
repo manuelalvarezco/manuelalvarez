@@ -1,12 +1,11 @@
 @extends('layouts.dashboard')
-@section('title', 'Certificates')
+@section('title', 'Posts')
 @section('content')
     <div class="row justify-content-end">
         <div class="col-md-10">
             <div class="d-flex justify-content-end">
-                <a href="{{ route('posts.create') }}" class="btn btn-sm btn-primary float-right">Crear</a>
+                <a href="{{ route('certificates.create') }}" class="btn btn-sm btn-primary btn-create">Crear</a>
             </div>
-
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}
@@ -23,7 +22,6 @@
                                     <img src="{{ $certificate->get_image }}" class="card-img-top">
                                     @endif
                                     <h5 class="card-title mt-2">{{ $certificate->title }}</h5>
-                                    <p class="card-text">{{ $certificate->school }}</p>
                                     <div class="d-flex justify-content-between">
                                         <a class="btn btn-outline-success" href="{{ route('certificates.edit', $certificate) }}"  class="btn btn-sm btn-success">Editar</a>
                                         <form action="{{ route('certificates.destroy', $certificate) }}" method="POST">
