@@ -5,7 +5,7 @@
     <div class="container">
         <div class="image-bg"
         ></div>
-
+        <contact-component></contact-component>
     </div>
 </div>
 @endsection

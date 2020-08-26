@@ -19,7 +19,8 @@
                         method="POST"
                         enctype="multipart/form-data"
                         >
-
+                        @csrf
+                        @method('PUT')
                         <div class="form-group">
                             <label for="title">Título *</label>
                             <input type="text" name="title" class="form-control" id="title" required value="{{ old('title', $service->title) }}">
@@ -35,8 +36,7 @@
 
 
                         <div class="form-group">
-                            @csrf
-                            @method('PUT')
+
                             <input type="submit" value="Actualizar" class="btn btn-primary">
                         </div>
                     </form>

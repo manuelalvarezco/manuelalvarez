@@ -14,7 +14,7 @@
                     @endif
 
                     <form
-                        action="{{ route('certificates.store') }}"
+                        action="{{ route('services.store') }}"
                         method="POST"
                         enctype="multipart/form-data"
                         >
@@ -28,12 +28,8 @@
                             <input type="file" name="file" id="file" class="form-control">
                         </div>
                         <div class="form-group">
-                            <label for="school">Instituto</label>
-                            <input type="text" name="school" id="school" class="form-control" >
-                        </div>
-                        <div class="form-group">
-                            <label for="url">URL</label>
-                            <input type="text" name="url" id="url" class="form-control" >
+                            <label for="projects">Proyectos realizados</label>
+                            <input type="text" name="projects" id="projects" class="form-control">
                         </div>
                         <div class="form-group">
 

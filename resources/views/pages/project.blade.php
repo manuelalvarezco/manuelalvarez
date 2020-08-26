@@ -24,7 +24,7 @@
                                 &ndash; Realizado con {{ $project->tecnology }}
                             </em>
                         </p>
-                        <small>URL: <a href="{{ $project->url }}">{{ $project->title }}</a></small>
+                        <small class="ml-2"><a href="{{ $project->url }}"> URL</a></small>
                     </div>
                 </div>
             </div>

@@ -18,6 +18,11 @@ class CertificateController extends Controller
         return view('certificates.index', compact('certificates'));
     }
 
+    public function create()
+    {
+        return view('certificates.create');
+    }
+
 
     public function store(CertifyRequest $request)
     {

@@ -19,6 +19,11 @@ class ServicesController extends Controller
         return view('services.index', compact('services'));
     }
 
+    public function create()
+    {
+        return view('services.create');
+    }
+
 
     public function store(ServiceRequest $request)
     {

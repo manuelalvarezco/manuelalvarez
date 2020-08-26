@@ -35,7 +35,7 @@
         <main class="container">
             @yield('content')
         </main>
-        <contact-component></contact-component>
+
         @include('partials.footer')
     </div>
 </body>
