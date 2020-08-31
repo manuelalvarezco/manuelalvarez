@@ -29,7 +29,12 @@
                         </em>
                         {{ $post->created_at->format('d M Y') }}
                     </p>
-                    <buttons-component id="{{ $post->id }}" likes="{{ $post->likes }}" hearts="{{ $post->hearts }}" ></buttons-component>
+                    <buttons-component :tags="[234, 266, 273]" id="{{ $post->id }}" likes="{{ $post->likes }}" hearts="{{ $post->hearts }}" ></buttons-component>
+                    @foreach($post->tags as $tag)
+                        <button type="button" class="btn btn-outline-primary">
+                        {{ $tag->name }}
+                        </button>
+                    @endforeach
                     @if($post->comment)
                     <div class="container">
                         <div class="row justify-content-between align-items-center">

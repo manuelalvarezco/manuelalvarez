@@ -21,20 +21,6 @@
                 </v-row>
             </v-col>
         </v-row>
-        <v-row>
-            <v-chip class="ma-2" label>
-                Empleo
-            </v-chip>
-            <v-chip class="ma-2" label>
-                Desarrollador
-            </v-chip>
-            <v-chip class="ma-2" label>
-                Colombia
-            </v-chip>
-            <v-chip class="ma-2" label>
-                Trabajo Remoto
-            </v-chip>
-        </v-row>
 
     </v-container>
 </v-app>
@@ -42,8 +28,9 @@
 
 <script>
 export default {
-    props: ["likes", "hearts", "id"],
+    props: ["likes", "hearts", "id",'tags'],
     data: () => ({
+        newTags:[],
         heartColor: '',
         uptColor: '',
         showComent: false,
@@ -60,6 +47,10 @@ export default {
 
         allHearts() {
             return Number(this.hearts) + this.newHearts;
+        },
+
+        allTags(){
+            return this.newTags = this.tags;
         }
     },
 
@@ -126,6 +117,6 @@ export default {
 <style scoped>
 .v-application,
 .v-application--wrap {
-    max-height: 200px !important;
+    max-height: 80px !important;
 }
 </style>

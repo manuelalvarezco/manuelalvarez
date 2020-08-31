@@ -130,4 +130,12 @@ class PostController extends Controller
             'post'   => $post
         ]);
     }
+
+
+    public function posts()
+    {
+        $posts = Post::all();
+
+        return response()->json($posts);
+    }
 }

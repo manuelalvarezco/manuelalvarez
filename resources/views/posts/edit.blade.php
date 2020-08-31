@@ -44,6 +44,7 @@
                                 <option value="0">Inactivo</option>
                             </select>
                           </div>
+
                         <div class="form-group">
                             @csrf
                             @method('PUT')

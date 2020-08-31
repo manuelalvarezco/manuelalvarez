@@ -49,6 +49,8 @@ Route::middleware(['auth'])->prefix('dashboard')->group(function () {
         Route::resource('customers', 'Backend\CustomerController');
 
         Route::get('profile','Backend\ProfileController@profile');
+
+        Route::resource('post-tags', 'Backend\PostTagController');
 });
 
 Route::resource('comments', 'Backend\CommentsController');
