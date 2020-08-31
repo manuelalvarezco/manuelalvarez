@@ -34,7 +34,7 @@
                                     @csrf @method('DELETE')
                                     <button type="submit" class="btn btn-outline-danger" onclick="return confirm('¿Are you Sure?')">Eliminar</button>
                                 </form>
-                                <a href="{{ route('post-tags.create') }}" class="btn btn-outline-primary">Add Tags</a>
+                                <a href="{{ route('post-tags.create' ) }}" class="btn btn-outline-primary">Add Tags</a>
                             </div>
 
                         </div>

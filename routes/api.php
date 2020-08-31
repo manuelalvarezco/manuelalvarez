@@ -30,3 +30,4 @@ Route::get('certificates','Backend\CertificateController@certificates');
 Route::get('services','Backend\ServicesController@services');
 Route::post('customers', 'Backend\CustomerController@store');
 Route::get('tags','Backend\TagController@tags');
+Route::post('tags','Backend\PostTagController@store');

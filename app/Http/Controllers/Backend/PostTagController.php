@@ -33,7 +33,31 @@ class PostTagController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $ids_tags = $request->tags_id;
+
+        for($i=0; $i<sizeof($ids_tags); $i++){
+
+            $data = array(
+                'tag_id'  => $ids_tags[$i],
+                'post_id' => $request->post_id,
+            );
+
+            $postTag = PostTag::create($data);
+        }
+
+        //return $array;
+
+       $postTag->save();
+
+
+
+
+        return response()->json([
+            'status' => 401,
+            'data'   => $postTag
+        ]);
+
     }
 
     /**
