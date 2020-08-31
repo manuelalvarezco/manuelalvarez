@@ -19,13 +19,15 @@
 </v-app>
 </template>
 
+
+
 <script>
 export default {
     data: () => ({
         tags: [],
         value: [],
         posts: [],
-        valuePost:null
+        valuePost: null
     }),
     mounted() {
         axios.get('/api/tags')
@@ -44,7 +46,7 @@ export default {
             })
 
         axios.get('/api/posts')
-            .then( resp => {
+            .then(resp => {
 
                 const titles = [];
 
@@ -62,7 +64,6 @@ export default {
     methods: {
 
     }
-
 
 }
 </script>
